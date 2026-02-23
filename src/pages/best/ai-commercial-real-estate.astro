@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+
+const allListings = await getCollection('listings');
+const slugs = ['v7-go', 'prophia', 'yardi-virtuoso', 'listedkit-ai'];
+const tools = slugs.map(s => allListings.find(l => l.data.slug === s)!.data);
+const features = ['Lease abstraction', 'Document processing', 'AI agents', 'Audit trail', 'Property management integration', 'ASC 842 compliance', 'API access'];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best AI Tools for Commercial Real Estate (2026)',
+  description: 'Compare AI tools for CRE professionals. Lease abstraction, document processing, and property management AI — V7 Go, Prophia, Yardi, and ListedKit.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+};
+
+const faqs = [
+  { question: 'What is AI lease abstraction?', answer: 'AI lease abstraction uses artificial intelligence to automatically extract key data points from commercial lease documents — rent amounts, term dates, escalation clauses, options, and hundreds of other fields. It reduces review time from 4-8 hours per lease to 15-30 minutes.' },
+  { question: 'What is the most accurate AI lease abstraction tool?', answer: 'V7 Go reports 99.5% accuracy for standard commercial lease clauses, backed by AI Citations that link every extracted data point to its source in the original document. Prophia achieves 99% accuracy using a hybrid AI + human review approach.' },
+  { question: 'How much does AI lease abstraction cost?', answer: 'Prophia offers self-service extraction at $20-25 per document. V7 Go uses custom enterprise pricing based on volume. Both are significantly cheaper than manual review, which can cost $300-1,000+ per lease.' },
+  { question: 'What is the best AI tool for property management?', answer: 'Yardi Virtuoso is the first AI agent marketplace for real estate, offering role-specific AI agents for property managers, accountants, and leasing staff. It integrates directly with the Yardi ecosystem. For transaction management, ListedKit AI offers affordable automation starting at $29/month.' },
+];
+---
+
+<BaseLayout
+  title="Best AI Tools for Commercial Real Estate (2026)"
+  description="Compare AI tools for CRE. Lease abstraction, document processing, property management — V7 Go, Prophia, Yardi Virtuoso, and ListedKit reviewed."
+  schema={schema}
+>
+  <article class="max-w-4xl">
+    <div class="mb-2 text-sm text-gray-500">
+      <a href="/" class="hover:text-blue-600">Home</a> / <a href="/best" class="hover:text-blue-600">Best Of</a> / AI for Commercial Real Estate
+    </div>
+    <h1 class="text-3xl font-bold mb-4">Best AI Tools for Commercial Real Estate (2026)</h1>
+    <p class="text-gray-600 mb-8">Commercial real estate is seeing massive AI adoption in lease abstraction, document processing, and property management. Here are the top tools.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+      <p class="font-semibold text-blue-900">🏆 Quick Pick:</p>
+      <ul class="text-sm text-blue-800 mt-2 space-y-1">
+        <li><strong>Best accuracy:</strong> <a href="/listing/v7-go" class="underline">V7 Go</a> — 99.5% accuracy + full audit trail</li>
+        <li><strong>Best hybrid AI+human:</strong> <a href="/listing/prophia" class="underline">Prophia</a> — $20/doc with human review</li>
+        <li><strong>Best for Yardi users:</strong> <a href="/listing/yardi-virtuoso" class="underline">Yardi Virtuoso</a> — AI agent marketplace</li>
+        <li><strong>Most affordable:</strong> <a href="/listing/listedkit-ai" class="underline">ListedKit AI</a> — $29/mo transaction management</li>
+      </ul>
+    </div>
+
+    <ComparisonTable items={tools} featureList={features} title="Feature Comparison" />
+
+    <section class="mt-12 space-y-8">
+      {tools.map((tool, i) => (
+        <div class="border-b border-gray-200 pb-8">
+          <h2 class="text-2xl font-bold mb-2">{i + 1}. {tool.name}</h2>
+          <p class="text-sm text-gray-500 mb-3">{tool.pricing.model === 'enterprise' ? 'Enterprise pricing' : `Starting at ${tool.pricing.startingPrice}`} · Rating: ★ {tool.rating?.toFixed(1)}</p>
+          <p class="text-gray-700 mb-4">{tool.description}</p>
+          <div class="grid grid-cols-2 gap-4">
+            {tool.pros && (
+              <div>
+                <h3 class="font-semibold text-green-700 mb-1">Pros</h3>
+                <ul class="text-sm space-y-1">{tool.pros.map((p: string) => <li>✅ {p}</li>)}</ul>
+              </div>
+            )}
+            {tool.cons && (
+              <div>
+                <h3 class="font-semibold text-red-700 mb-1">Cons</h3>
+                <ul class="text-sm space-y-1">{tool.cons.map((c: string) => <li>❌ {c}</li>)}</ul>
+              </div>
+            )}
+          </div>
+          <a href={`/listing/${tool.slug}`} class="inline-block mt-3 text-blue-600 text-sm hover:underline">Read full review →</a>
+        </div>
+      ))}
+    </section>
+
+    <FAQSection faqs={faqs} />
+  </article>
+</BaseLayout>

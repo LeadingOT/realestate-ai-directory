@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'RealEstateAI.tools',
+  url: 'https://realestateai.tools',
+  description: 'Independent directory and comparison platform for AI tools used by real estate professionals.',
+  foundingDate: '2026',
+};
+---
+
+<BaseLayout
+  title="About RealEstateAI.tools - Independent AI Tool Reviews"
+  description="RealEstateAI.tools is an independent directory helping real estate agents, brokers, and investors find the best AI tools. Unbiased reviews, honest comparisons."
+  schema={schema}
+>
+  <article class="max-w-3xl">
+    <h1 class="text-3xl font-bold mb-6">About RealEstateAI.tools</h1>
+    
+    <div class="prose prose-gray max-w-none">
+      <p class="text-lg text-gray-700 mb-4">
+        RealEstateAI.tools is an independent directory and comparison platform for AI tools used by real estate professionals. We help agents, brokers, investors, and property managers find the right AI tools for their specific needs.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">What We Do</h2>
+      <p class="text-gray-700 mb-4">
+        We research, review, and compare AI tools across every real estate workflow — from lead generation and CRM to virtual staging, marketing, property valuation, and transaction management. Every tool in our directory includes detailed feature lists, pricing information, pros and cons, and honest assessments.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Our Review Process</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+        <li><strong>Independent:</strong> We are not paid by any tool to be listed. Our reviews are unbiased.</li>
+        <li><strong>Data-driven:</strong> We analyze features, pricing, user reviews, and market data.</li>
+        <li><strong>Updated regularly:</strong> The AI landscape changes fast. We update our listings weekly.</li>
+        <li><strong>Structured for comparison:</strong> Every listing follows the same format so you can compare apples to apples.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Categories We Cover</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+        <li><strong>Lead Generation:</strong> AI tools that predict likely sellers and qualify buyer leads (Top Producer, SmartZip, Ylopo)</li>
+        <li><strong>CRM & Follow-up:</strong> AI-powered CRM platforms with chatbots and automated nurturing (Lofty, Real Geeks)</li>
+        <li><strong>Virtual Staging:</strong> AI tools that stage empty rooms with virtual furniture (REimagineHome, Collov AI)</li>
+        <li><strong>Marketing & Content:</strong> AI for listing videos, social media, and email campaigns (Trolto, Rechat, Canva)</li>
+        <li><strong>Analytics & Market Data:</strong> AI property valuation and market intelligence (HouseCanary, CoreLogic)</li>
+        <li><strong>Transaction Management:</strong> AI for lease abstraction and closing coordination (V7 Go, ListedKit)</li>
+        <li><strong>Property Management:</strong> AI agents for property and asset management (Yardi Virtuoso)</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Who This Is For</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li><strong>Real estate agents</strong> looking for AI tools to generate leads and close more deals</li>
+        <li><strong>Brokers and team leaders</strong> evaluating AI platforms for their teams</li>
+        <li><strong>Real estate investors</strong> seeking AI-powered analytics and valuation tools</li>
+        <li><strong>Property managers</strong> looking to automate operations with AI</li>
+        <li><strong>Commercial real estate professionals</strong> needing lease abstraction and document AI</li>
+      </ul>
+    </div>
+  </article>
+</BaseLayout>

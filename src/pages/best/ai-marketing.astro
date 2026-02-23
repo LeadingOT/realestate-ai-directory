@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+
+const allListings = await getCollection('listings');
+const slugs = ['trolto', 'rechat', 'canva', 'scout-email'];
+const tools = slugs.map(s => allListings.find(l => l.data.slug === s)!.data);
+const features = ['AI content generation', 'Video creation', 'Social media posting', 'Email campaigns', 'Listing marketing', 'Design templates', 'CMA generation'];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best AI Marketing Tools for Real Estate Agents (2026)',
+  description: 'Compare AI marketing tools for realtors. Trolto, Rechat, Canva, and Scout reviewed for listing marketing, social media, and email campaigns.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+};
+
+const faqs = [
+  { question: 'What is the best AI marketing tool for real estate agents?', answer: 'Trolto is best for listing video marketing ($59/mo), creating cinematic videos from still photos. Rechat is best as an all-in-one solution with AI assistant Lucy for CMAs, websites, and marketing materials. Canva is best for DIY design with a free tier available.' },
+  { question: 'Can AI create listing videos from photos?', answer: 'Yes. Trolto creates cinematic fly-through videos from still listing photos with smooth pans and effects synced to music. The results are nearly indistinguishable from professional videography. Collov AI also offers AI virtual tour videos from photos.' },
+  { question: 'What is the cheapest AI marketing tool for realtors?', answer: 'Canva offers a free version with AI features. Trolto starts at $59/month for video marketing. Scout has a free tier for basic email marketing.' },
+  { question: 'Should I use AI for real estate email marketing?', answer: 'Yes. Scout uses AI to enrich your leads with personal details (birthdays, home info) and creates personalized email campaigns automatically. AI-written emails typically see higher open and response rates than generic templates.' },
+];
+---
+
+<BaseLayout
+  title="Best AI Marketing Tools for Real Estate Agents (2026)"
+  description="Compare the top AI marketing tools for realtors. Video creation, social media, email campaigns, and listing marketing — features, pricing, and reviews."
+  schema={schema}
+>
+  <article class="max-w-4xl">
+    <div class="mb-2 text-sm text-gray-500">
+      <a href="/" class="hover:text-blue-600">Home</a> / <a href="/best" class="hover:text-blue-600">Best Of</a> / AI Marketing
+    </div>
+    <h1 class="text-3xl font-bold mb-4">Best AI Marketing Tools for Real Estate Agents (2026)</h1>
+    <p class="text-gray-600 mb-8">From listing videos to email campaigns, AI is transforming how agents market properties and build their brand. Here are the best tools.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+      <p class="font-semibold text-blue-900">🏆 Quick Pick:</p>
+      <ul class="text-sm text-blue-800 mt-2 space-y-1">
+        <li><strong>Best for video:</strong> <a href="/listing/trolto" class="underline">Trolto</a> — Cinematic listing videos from photos</li>
+        <li><strong>Best all-in-one:</strong> <a href="/listing/rechat" class="underline">Rechat</a> — AI assistant for everything</li>
+        <li><strong>Best free option:</strong> <a href="/listing/canva" class="underline">Canva</a> — Design with AI suggestions</li>
+        <li><strong>Best for email:</strong> <a href="/listing/scout-email" class="underline">Scout</a> — AI-personalized campaigns</li>
+      </ul>
+    </div>
+
+    <ComparisonTable items={tools} featureList={features} title="Feature Comparison" />
+
+    <section class="mt-12 space-y-8">
+      {tools.map((tool, i) => (
+        <div class="border-b border-gray-200 pb-8">
+          <h2 class="text-2xl font-bold mb-2">{i + 1}. {tool.name}</h2>
+          <p class="text-sm text-gray-500 mb-3">Starting at {tool.pricing.startingPrice || 'Custom pricing'} · Rating: ★ {tool.rating?.toFixed(1)}</p>
+          <p class="text-gray-700 mb-4">{tool.description}</p>
+          <div class="grid grid-cols-2 gap-4">
+            {tool.pros && (
+              <div>
+                <h3 class="font-semibold text-green-700 mb-1">Pros</h3>
+                <ul class="text-sm space-y-1">{tool.pros.map((p: string) => <li>✅ {p}</li>)}</ul>
+              </div>
+            )}
+            {tool.cons && (
+              <div>
+                <h3 class="font-semibold text-red-700 mb-1">Cons</h3>
+                <ul class="text-sm space-y-1">{tool.cons.map((c: string) => <li>❌ {c}</li>)}</ul>
+              </div>
+            )}
+          </div>
+          <a href={`/listing/${tool.slug}`} class="inline-block mt-3 text-blue-600 text-sm hover:underline">Read full review →</a>
+        </div>
+      ))}
+    </section>
+
+    <FAQSection faqs={faqs} />
+  </article>
+</BaseLayout>

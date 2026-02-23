@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+
+const allListings = await getCollection('listings');
+const slugs = ['lofty-ai-assistant', 'real-geeks', 'fello', 'sidekick-structurely'];
+const tools = slugs.map(s => allListings.find(l => l.data.slug === s)!.data);
+const features = ['AI chat assistant', '24/7 lead engagement', 'Lead qualification', 'Lead scoring', 'CRM platform', 'SEO tools', 'Any CRM integration'];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best AI CRMs for Real Estate Agents (2026)',
+  description: 'Compare AI-powered CRM platforms for real estate. Lofty, Real Geeks, Fello, and Structurely reviewed with pricing and features.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+};
+
+const faqs = [
+  { question: 'What is the best AI CRM for real estate agents?', answer: 'Lofty (formerly Chime) is the best all-in-one AI CRM with 24/7 chat assistant and lead routing. Real Geeks is best for agents who also want SEO tools. Fello is ideal if you already have a CRM and want to add AI lead scoring on top.' },
+  { question: 'Do I need a separate CRM if I use an AI lead tool?', answer: 'Not always. Lofty and Real Geeks include full CRM functionality. However, tools like Fello and Structurely are designed as add-ons that integrate with your existing CRM (Follow Up Boss, KvCORE, etc.).' },
+  { question: 'How does AI improve a real estate CRM?', answer: 'AI enhances CRMs by automatically qualifying leads via chat, scoring leads based on likelihood to transact, personalizing follow-up timing and messaging, and routing hot leads to the right agent instantly.' },
+  { question: 'What is the most affordable AI CRM for real estate?', answer: 'Fello starts at $165/month as a CRM add-on. Structurely Sidekick starts at $149/month. Both work with your existing CRM, so you don\'t need to switch platforms.' },
+];
+---
+
+<BaseLayout
+  title="Best AI CRMs for Real Estate Agents (2026) - Compare & Review"
+  description="Compare the top AI-powered CRM platforms for real estate agents. Lofty, Real Geeks, Fello, and Structurely — features, pricing, and honest reviews."
+  schema={schema}
+>
+  <article class="max-w-4xl">
+    <div class="mb-2 text-sm text-gray-500">
+      <a href="/" class="hover:text-blue-600">Home</a> / <a href="/best" class="hover:text-blue-600">Best Of</a> / AI CRM
+    </div>
+    <h1 class="text-3xl font-bold mb-4">Best AI CRMs for Real Estate Agents (2026)</h1>
+    <p class="text-gray-600 mb-8">AI-powered CRMs help real estate agents automate lead follow-up, qualify prospects, and close more deals. Here's how the top platforms compare.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+      <p class="font-semibold text-blue-900">🏆 Quick Pick:</p>
+      <ul class="text-sm text-blue-800 mt-2 space-y-1">
+        <li><strong>Best all-in-one:</strong> <a href="/listing/lofty-ai-assistant" class="underline">Lofty AI Assistant</a> — Full CRM + 24/7 AI chat</li>
+        <li><strong>Best for SEO + AI:</strong> <a href="/listing/real-geeks" class="underline">Real Geeks</a> — AI chat + SEO Fast Track</li>
+        <li><strong>Best add-on:</strong> <a href="/listing/fello" class="underline">Fello</a> — AI scoring for any existing CRM</li>
+        <li><strong>Best for text nurturing:</strong> <a href="/listing/sidekick-structurely" class="underline">Structurely Sidekick</a> — Natural AI conversations</li>
+      </ul>
+    </div>
+
+    <ComparisonTable items={tools} featureList={features} title="Feature Comparison" />
+
+    <section class="mt-12 space-y-8">
+      {tools.map((tool, i) => (
+        <div class="border-b border-gray-200 pb-8">
+          <h2 class="text-2xl font-bold mb-2">{i + 1}. {tool.name}</h2>
+          <p class="text-sm text-gray-500 mb-3">Starting at {tool.pricing.startingPrice || 'Custom pricing'} · Rating: ★ {tool.rating?.toFixed(1)}</p>
+          <p class="text-gray-700 mb-4">{tool.description}</p>
+          <div class="grid grid-cols-2 gap-4">
+            {tool.pros && (
+              <div>
+                <h3 class="font-semibold text-green-700 mb-1">Pros</h3>
+                <ul class="text-sm space-y-1">{tool.pros.map((p: string) => <li>✅ {p}</li>)}</ul>
+              </div>
+            )}
+            {tool.cons && (
+              <div>
+                <h3 class="font-semibold text-red-700 mb-1">Cons</h3>
+                <ul class="text-sm space-y-1">{tool.cons.map((c: string) => <li>❌ {c}</li>)}</ul>
+              </div>
+            )}
+          </div>
+          <a href={`/listing/${tool.slug}`} class="inline-block mt-3 text-blue-600 text-sm hover:underline">Read full review →</a>
+        </div>
+      ))}
+    </section>
+
+    <FAQSection faqs={faqs} />
+  </article>
+</BaseLayout>

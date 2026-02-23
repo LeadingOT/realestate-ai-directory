@@ -1,0 +1,30 @@
+# RealEstateAI.tools
+
+> A comprehensive directory of AI tools for real estate professionals. Compare features, pricing, and reviews for lead generation, CRM, virtual staging, marketing, property valuation, transaction management, and property management AI tools.
+
+## Categories
+
+- [Lead Generation](/category/lead-generation): AI tools for finding and qualifying buyer and seller leads
+- [CRM & Follow-up](/category/crm-&-follow-up): AI-powered CRM platforms for lead nurturing
+- [Virtual Staging](/category/virtual-staging): AI tools for staging empty listings with virtual furniture
+- [Marketing & Content](/category/marketing-&-content): AI tools for listing videos, social media, and email campaigns
+- [Analytics & Market Data](/category/analytics-&-market-data): AI property valuation and market analytics platforms
+- [Transaction Management](/category/transaction-management): AI tools for streamlining contract-to-close workflows
+- [Property Management](/category/property-management): AI tools for managing rental properties and portfolios
+
+## Comparison Guides
+
+- [Best AI Lead Generation Tools](/best/ai-lead-generation): Top Producer, SmartZip, Ylopo, Structurely, Fello
+- [Best AI Virtual Staging Tools](/best/ai-virtual-staging): REimagineHome, Collov AI, Trolto
+- [Best AI CRMs for Real Estate](/best/ai-crm): Lofty, Real Geeks, Fello, Structurely
+- [Best AI Marketing Tools](/best/ai-marketing): Trolto, Rechat, Canva, Scout
+- [Best AI Property Valuation Tools](/best/ai-property-valuation): HouseCanary, CoreLogic
+- [Best AI for Commercial Real Estate](/best/ai-commercial-real-estate): V7 Go, Prophia, Yardi Virtuoso, ListedKit
+
+## Key Facts
+
+- 19 AI tools reviewed and compared
+- 7 categories covering all real estate workflows
+- 6 in-depth comparison guides
+- Updated February 2026
+- Independent reviews — not sponsored
