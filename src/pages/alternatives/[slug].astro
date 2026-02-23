@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const listings = await getCollection('listings');
+  return listings.map((listing) => {
+    const alternatives = listings
+      .filter(l => l.data.category === listing.data.category && l.data.slug !== listing.data.slug)
+      .map(l => l.data)
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    return {
+      params: { slug: listing.data.slug },
+      props: { tool: listing.data, alternatives },
+    };
+  });
+}
+
+const { tool, alternatives } = Astro.props;
+const count = alternatives.length;
+const title = `Best ${tool.name} Alternatives in 2026 (Top ${count} Picks)`;
+const description = `Looking for ${tool.name} alternatives? Compare the top ${count} ${tool.category} tools with pricing, ratings, and features to find the best fit.`;
+const canonical = `https://realestateai.tools/alternatives/${tool.slug}`;
+
+// Generate alternative descriptions
+function getAltReason(alt: any, tool: any): string {
+  const reasons: string[] = [];
+  if ((alt.rating || 0) > (tool.rating || 0)) {
+    reasons.push(`With a ${alt.rating}/5 rating, ${alt.name} scores higher than ${tool.name}.`);
+  }
+  if (alt.pricing?.model === 'free' || alt.pricing?.model === 'freemium') {
+    reasons.push(`${alt.name} offers a ${alt.pricing.model} plan, making it accessible for agents on a budget.`);
+  } else if (alt.pricing?.startingPrice) {
+    reasons.push(`Starting at ${alt.pricing.startingPrice}, ${alt.name} provides competitive pricing.`);
+  }
+  const uniqueFeatures = (alt.features || []).filter((f: string) => !(tool.features || []).includes(f)).slice(0, 2);
+  if (uniqueFeatures.length > 0) {
+    reasons.push(`It stands out with ${uniqueFeatures.join(' and ')}.`);
+  }
+  if (reasons.length === 0) {
+    reasons.push(`${alt.name} is a solid ${tool.category} alternative with ${(alt.features || []).slice(0, 2).join(' and ')}.`);
+    reasons.push(`It has earned a ${alt.rating || 'N/A'}/5 rating from real estate professionals.`);
+  }
+  return reasons.slice(0, 3).join(' ');
+}
+
+// Find cheapest and free alternatives for FAQ
+const cheapest = [...alternatives].filter(a => a.pricing?.startingPrice).sort((a, b) => {
+  const priceA = parseFloat((a.pricing.startingPrice || '').replace(/[^0-9.]/g, '')) || Infinity;
+  const priceB = parseFloat((b.pricing.startingPrice || '').replace(/[^0-9.]/g, '')) || Infinity;
+  return priceA - priceB;
+})[0];
+const freeAlt = alternatives.find(a => a.pricing?.model === 'free' || a.pricing?.model === 'freemium');
+const topAlt = alternatives[0];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: title,
+  description,
+  numberOfItems: count,
+  itemListElement: alternatives.map((alt: any, i: number) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: alt.name,
+    url: `https://realestateai.tools/listing/${alt.slug}`,
+    description: alt.tagline,
+  })),
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    topAlt && {
+      '@type': 'Question',
+      name: `Is ${topAlt.name} better than ${tool.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `${topAlt.name} (rated ${topAlt.rating}/5) and ${tool.name} (rated ${tool.rating}/5) serve similar needs in ${tool.category}. ${topAlt.name} excels with ${(topAlt.features || []).slice(0, 2).join(' and ')}, while ${tool.name} is known for ${(tool.features || []).slice(0, 2).join(' and ')}. The best choice depends on your specific workflow and budget.` },
+    },
+    cheapest && {
+      '@type': 'Question',
+      name: `What is the cheapest alternative to ${tool.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `The most affordable alternative to ${tool.name} is ${cheapest.name}, starting at ${cheapest.pricing.startingPrice}. It offers ${(cheapest.features || []).slice(0, 3).join(', ')}.` },
+    },
+    {
+      '@type': 'Question',
+      name: `What is the best free alternative to ${tool.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: freeAlt ? `${freeAlt.name} offers a ${freeAlt.pricing.model} plan and is the best free alternative to ${tool.name} in the ${tool.category} space.` : `Currently, there are no completely free alternatives to ${tool.name} in the ${tool.category} category. However, some tools like ${alternatives[0]?.name || 'others'} may offer free trials or limited free tiers.` },
+    },
+  ].filter(Boolean),
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &gt;
+    <a href={`/listing/${tool.slug}`} class="hover:text-blue-600">{tool.name}</a> &gt;
+    <span>Alternatives</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold mb-4">{title}</h1>
+  <p class="text-lg text-gray-600 mb-8">
+    Not sure if <a href={`/listing/${tool.slug}`} class="text-blue-600 hover:underline">{tool.name}</a> is the right fit?
+    Here are the top {count} alternatives in the <strong>{tool.category}</strong> category for 2026.
+  </p>
+
+  {count > 0 ? (
+    <>
+      <!-- Comparison Table -->
+      <div class="overflow-x-auto mb-12">
+        <table class="w-full border-collapse border border-gray-200 text-sm">
+          <thead>
+            <tr class="bg-gray-50">
+              <th class="border border-gray-200 px-4 py-3 text-left">Tool</th>
+              <th class="border border-gray-200 px-4 py-3 text-left">Pricing</th>
+              <th class="border border-gray-200 px-4 py-3 text-center">Rating</th>
+              <th class="border border-gray-200 px-4 py-3 text-left">Key Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-blue-50">
+              <td class="border border-gray-200 px-4 py-3 font-semibold">
+                <a href={`/listing/${tool.slug}`} class="text-blue-600 hover:underline">{tool.name}</a>
+                <span class="text-xs text-gray-500 ml-1">(current)</span>
+              </td>
+              <td class="border border-gray-200 px-4 py-3">{tool.pricing?.startingPrice || 'Contact for pricing'}</td>
+              <td class="border border-gray-200 px-4 py-3 text-center">{tool.rating ? `${tool.rating}/5` : 'N/A'}</td>
+              <td class="border border-gray-200 px-4 py-3">{(tool.features || []).slice(0, 3).join(', ')}</td>
+            </tr>
+            {alternatives.map((alt: any) => (
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-200 px-4 py-3 font-semibold">
+                  <a href={`/listing/${alt.slug}`} class="text-blue-600 hover:underline">{alt.name}</a>
+                </td>
+                <td class="border border-gray-200 px-4 py-3">{alt.pricing?.startingPrice || 'Contact for pricing'}</td>
+                <td class="border border-gray-200 px-4 py-3 text-center">{alt.rating ? `${alt.rating}/5` : 'N/A'}</td>
+                <td class="border border-gray-200 px-4 py-3">{(alt.features || []).slice(0, 3).join(', ')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Detailed Alternatives -->
+      <h2 class="text-2xl font-bold mb-6">Detailed Look at Each Alternative</h2>
+      {alternatives.map((alt: any, i: number) => (
+        <div class="mb-8 p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="text-xl font-semibold">
+              <span class="text-gray-400 mr-2">#{i + 1}</span>
+              <a href={`/listing/${alt.slug}`} class="text-blue-600 hover:underline">{alt.name}</a>
+            </h3>
+            {alt.rating && <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-medium">⭐ {alt.rating}/5</span>}
+          </div>
+          <p class="text-gray-600 mb-3">{getAltReason(alt, tool)}</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            {(alt.features || []).slice(0, 4).map((f: string) => (
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{f}</span>
+            ))}
+          </div>
+          <div class="flex gap-4 text-sm">
+            <span class="text-gray-500">💰 {alt.pricing?.startingPrice || 'Contact for pricing'}</span>
+            <a href={`/listing/${alt.slug}`} class="text-blue-600 hover:underline">View Details →</a>
+            <a href={`/compare/${[tool.slug, alt.slug].sort().join('-vs-')}`} class="text-blue-600 hover:underline">Compare →</a>
+          </div>
+        </div>
+      ))}
+
+      <!-- FAQ Section -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+        <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+        
+        {topAlt && (
+          <div class="mb-6 border-b border-gray-200 pb-6">
+            <h3 class="text-lg font-semibold mb-2">Is {topAlt.name} better than {tool.name}?</h3>
+            <p class="text-gray-600">{topAlt.name} (rated {topAlt.rating}/5) and {tool.name} (rated {tool.rating}/5) serve similar needs in {tool.category}. {topAlt.name} excels with {(topAlt.features || []).slice(0, 2).join(' and ')}, while {tool.name} is known for {(tool.features || []).slice(0, 2).join(' and ')}. The best choice depends on your specific workflow and budget.</p>
+          </div>
+        )}
+
+        {cheapest && (
+          <div class="mb-6 border-b border-gray-200 pb-6">
+            <h3 class="text-lg font-semibold mb-2">What is the cheapest alternative to {tool.name}?</h3>
+            <p class="text-gray-600">The most affordable alternative to {tool.name} is <a href={`/listing/${cheapest.slug}`} class="text-blue-600 hover:underline">{cheapest.name}</a>, starting at {cheapest.pricing.startingPrice}. It offers {(cheapest.features || []).slice(0, 3).join(', ')}.</p>
+          </div>
+        )}
+
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-2">What is the best free alternative to {tool.name}?</h3>
+          <p class="text-gray-600">
+            {freeAlt ? (
+              <>{freeAlt.name} offers a {freeAlt.pricing.model} plan and is the best free alternative to {tool.name}. <a href={`/listing/${freeAlt.slug}`} class="text-blue-600 hover:underline">Learn more about {freeAlt.name} →</a></>
+            ) : (
+              <>Currently, there are no completely free alternatives to {tool.name} in the {tool.category} category. However, some tools may offer free trials or limited free tiers.</>
+            )}
+          </p>
+        </div>
+      </section>
+    </>
+  ) : (
+    <p class="text-gray-500 text-lg">No alternatives found in the {tool.category} category yet. Check back soon!</p>
+  )}
+</BaseLayout>

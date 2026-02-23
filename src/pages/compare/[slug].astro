@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const listings = await getCollection('listings');
+  const paths: any[] = [];
+  
+  // Group by category
+  const byCategory: Record<string, any[]> = {};
+  for (const l of listings) {
+    const cat = l.data.category;
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(l.data);
+  }
+  
+  // Generate pairs within each category (sorted slugs to avoid duplicates)
+  for (const tools of Object.values(byCategory)) {
+    for (let i = 0; i < tools.length; i++) {
+      for (let j = i + 1; j < tools.length; j++) {
+        const [a, b] = [tools[i], tools[j]].sort((x, y) => x.slug.localeCompare(y.slug));
+        paths.push({
+          params: { slug: `${a.slug}-vs-${b.slug}` },
+          props: { toolA: a, toolB: b },
+        });
+      }
+    }
+  }
+  
+  return paths;
+}
+
+const { toolA, toolB } = Astro.props;
+const title = `${toolA.name} vs ${toolB.name}: Detailed Comparison (2026)`;
+const description = `Compare ${toolA.name} and ${toolB.name} side by side. See features, pricing, pros, cons, and ratings to pick the best ${toolA.category} tool.`;
+const canonical = `https://realestateai.tools/compare/${toolA.slug}-vs-${toolB.slug}`;
+
+// Determine winner
+const scoreA = (toolA.rating || 0) + (toolA.features?.length || 0) * 0.1 + (toolA.pros?.length || 0) * 0.15;
+const scoreB = (toolB.rating || 0) + (toolB.features?.length || 0) * 0.1 + (toolB.pros?.length || 0) * 0.15;
+const winner = scoreA > scoreB ? toolA : scoreB > scoreA ? toolB : null;
+
+// Generate comparison analysis
+function getAnalysis() {
+  const aFeats = (toolA.features || []).slice(0, 3).join(', ');
+  const bFeats = (toolB.features || []).slice(0, 3).join(', ');
+  const aPros = (toolA.pros || []).slice(0, 2).join(' and ');
+  const bPros = (toolB.pros || []).slice(0, 2).join(' and ');
+  const aCons = (toolA.cons || []).slice(0, 1).join('');
+  const bCons = (toolB.cons || []).slice(0, 1).join('');
+  
+  return `When comparing ${toolA.name} and ${toolB.name}, both tools serve the ${toolA.category} space but take different approaches. ${toolA.name} focuses on ${aFeats}, making it ideal for agents who value ${aPros}. On the other hand, ${toolB.name} emphasizes ${bFeats} and is praised for ${bPros}. In terms of pricing, ${toolA.name} starts at ${toolA.pricing?.startingPrice || 'custom pricing'} while ${toolB.name} comes in at ${toolB.pricing?.startingPrice || 'custom pricing'}. ${toolA.name} has a rating of ${toolA.rating || 'N/A'}/5 compared to ${toolB.name}'s ${toolB.rating || 'N/A'}/5. ${aCons ? `One consideration with ${toolA.name} is ${aCons.toLowerCase()}.` : ''} ${bCons ? `For ${toolB.name}, users note ${bCons.toLowerCase()}.` : ''} ${winner ? `Overall, ${winner.name} edges ahead for most real estate professionals due to its stronger feature set and user satisfaction, but ${winner.slug === toolA.slug ? toolB.name : toolA.name} may be better suited for specific workflows or budget constraints.` : `Both tools are evenly matched, and the best choice depends on your specific needs and budget.`} We recommend trying both platforms before committing to ensure the best fit for your real estate business.`;
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: `Which is better, ${toolA.name} or ${toolB.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: winner ? `${winner.name} has a higher overall score with a ${winner.rating}/5 rating. However, both tools excel in different areas of ${toolA.category}.` : `Both tools are closely matched. Your choice depends on specific needs and budget.` },
+    },
+    {
+      '@type': 'Question',
+      name: `Is ${toolA.name} cheaper than ${toolB.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `${toolA.name} starts at ${toolA.pricing?.startingPrice || 'custom pricing'}, while ${toolB.name} starts at ${toolB.pricing?.startingPrice || 'custom pricing'}. Compare both pricing pages for the most current information.` },
+    },
+    {
+      '@type': 'Question',
+      name: `Can I switch from ${toolA.name} to ${toolB.name}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `Yes, switching between ${toolA.category} tools is common. Most platforms offer data export features and onboarding support to help with migration.` },
+    },
+  ],
+};
+
+const maxFeatures = Math.max(toolA.features?.length || 0, toolB.features?.length || 0);
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={faqSchema}>
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &gt;
+    <span>Compare</span> &gt;
+    <span>{toolA.name} vs {toolB.name}</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold mb-4">{title}</h1>
+  <p class="text-lg text-gray-600 mb-8">
+    A detailed side-by-side comparison of <a href={`/listing/${toolA.slug}`} class="text-blue-600 hover:underline">{toolA.name}</a> and
+    <a href={`/listing/${toolB.slug}`} class="text-blue-600 hover:underline">{toolB.name}</a> — two popular {toolA.category} tools for real estate professionals.
+  </p>
+
+  <!-- Quick Overview -->
+  <div class="grid grid-cols-2 gap-6 mb-10">
+    <div class={`p-6 border-2 rounded-lg ${winner?.slug === toolA.slug ? 'border-green-400 bg-green-50' : 'border-gray-200'}`}>
+      {winner?.slug === toolA.slug && <span class="bg-green-500 text-white text-xs px-2 py-1 rounded mb-2 inline-block">🏆 Winner</span>}
+      <h2 class="text-xl font-bold mb-2">{toolA.name}</h2>
+      <p class="text-sm text-gray-600 mb-3">{toolA.tagline}</p>
+      <div class="space-y-2 text-sm">
+        <p><strong>Rating:</strong> {toolA.rating ? `⭐ ${toolA.rating}/5` : 'N/A'}</p>
+        <p><strong>Price:</strong> {toolA.pricing?.startingPrice || 'Contact for pricing'}</p>
+        <p><strong>Model:</strong> {toolA.pricing?.model}</p>
+      </div>
+      <a href={`/listing/${toolA.slug}`} class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Full Profile →</a>
+    </div>
+    <div class={`p-6 border-2 rounded-lg ${winner?.slug === toolB.slug ? 'border-green-400 bg-green-50' : 'border-gray-200'}`}>
+      {winner?.slug === toolB.slug && <span class="bg-green-500 text-white text-xs px-2 py-1 rounded mb-2 inline-block">🏆 Winner</span>}
+      <h2 class="text-xl font-bold mb-2">{toolB.name}</h2>
+      <p class="text-sm text-gray-600 mb-3">{toolB.tagline}</p>
+      <div class="space-y-2 text-sm">
+        <p><strong>Rating:</strong> {toolB.rating ? `⭐ ${toolB.rating}/5` : 'N/A'}</p>
+        <p><strong>Price:</strong> {toolB.pricing?.startingPrice || 'Contact for pricing'}</p>
+        <p><strong>Model:</strong> {toolB.pricing?.model}</p>
+      </div>
+      <a href={`/listing/${toolB.slug}`} class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Full Profile →</a>
+    </div>
+  </div>
+
+  <!-- Feature Comparison Table -->
+  <h2 class="text-2xl font-bold mb-4">Feature Comparison</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="w-full border-collapse border border-gray-200 text-sm">
+      <thead>
+        <tr class="bg-gray-50">
+          <th class="border border-gray-200 px-4 py-3 text-left">Aspect</th>
+          <th class="border border-gray-200 px-4 py-3 text-left">{toolA.name}</th>
+          <th class="border border-gray-200 px-4 py-3 text-left">{toolB.name}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-200 px-4 py-3 font-medium">Rating</td>
+          <td class="border border-gray-200 px-4 py-3">{toolA.rating ? `${toolA.rating}/5` : 'N/A'}</td>
+          <td class="border border-gray-200 px-4 py-3">{toolB.rating ? `${toolB.rating}/5` : 'N/A'}</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-200 px-4 py-3 font-medium">Starting Price</td>
+          <td class="border border-gray-200 px-4 py-3">{toolA.pricing?.startingPrice || 'Contact'}</td>
+          <td class="border border-gray-200 px-4 py-3">{toolB.pricing?.startingPrice || 'Contact'}</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-200 px-4 py-3 font-medium">Pricing Model</td>
+          <td class="border border-gray-200 px-4 py-3 capitalize">{toolA.pricing?.model}</td>
+          <td class="border border-gray-200 px-4 py-3 capitalize">{toolB.pricing?.model}</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-200 px-4 py-3 font-medium">Features Count</td>
+          <td class="border border-gray-200 px-4 py-3">{toolA.features?.length || 0}</td>
+          <td class="border border-gray-200 px-4 py-3">{toolB.features?.length || 0}</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-200 px-4 py-3 font-medium">Key Features</td>
+          <td class="border border-gray-200 px-4 py-3">{(toolA.features || []).slice(0, 4).join(', ')}</td>
+          <td class="border border-gray-200 px-4 py-3">{(toolB.features || []).slice(0, 4).join(', ')}</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-200 px-4 py-3 font-medium">Best For</td>
+          <td class="border border-gray-200 px-4 py-3">{(toolA.tags || []).slice(0, 3).join(', ')}</td>
+          <td class="border border-gray-200 px-4 py-3">{(toolB.tags || []).slice(0, 3).join(', ')}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pros and Cons -->
+  <h2 class="text-2xl font-bold mb-4">Pros & Cons</h2>
+  <div class="grid grid-cols-2 gap-6 mb-10">
+    <div>
+      <h3 class="font-bold mb-3">{toolA.name}</h3>
+      <div class="mb-4">
+        <h4 class="text-green-600 font-medium mb-2">✅ Pros</h4>
+        <ul class="space-y-1 text-sm">
+          {(toolA.pros || []).map((p: string) => <li class="text-gray-700">• {p}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-red-600 font-medium mb-2">❌ Cons</h4>
+        <ul class="space-y-1 text-sm">
+          {(toolA.cons || []).map((c: string) => <li class="text-gray-700">• {c}</li>)}
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-bold mb-3">{toolB.name}</h3>
+      <div class="mb-4">
+        <h4 class="text-green-600 font-medium mb-2">✅ Pros</h4>
+        <ul class="space-y-1 text-sm">
+          {(toolB.pros || []).map((p: string) => <li class="text-gray-700">• {p}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-red-600 font-medium mb-2">❌ Cons</h4>
+        <ul class="space-y-1 text-sm">
+          {(toolB.cons || []).map((c: string) => <li class="text-gray-700">• {c}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analysis -->
+  <h2 class="text-2xl font-bold mb-4">Our Analysis</h2>
+  <div class="bg-gray-50 p-6 rounded-lg mb-10">
+    <p class="text-gray-700 leading-relaxed">{getAnalysis()}</p>
+  </div>
+
+  <!-- Winner -->
+  {winner && (
+    <div class="bg-green-50 border-2 border-green-400 rounded-lg p-6 mb-10 text-center">
+      <h2 class="text-2xl font-bold mb-2">🏆 Our Recommendation</h2>
+      <p class="text-lg">We recommend <a href={`/listing/${winner.slug}`} class="text-blue-600 font-bold hover:underline">{winner.name}</a> for most real estate professionals.</p>
+      <p class="text-gray-600 mt-2">With a {winner.rating}/5 rating and strong features in {(winner.features || []).slice(0, 2).join(' and ')}, it offers the best overall value.</p>
+    </div>
+  )}
+
+  <!-- FAQ -->
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    
+    <div class="mb-6 border-b border-gray-200 pb-6">
+      <h3 class="text-lg font-semibold mb-2">Which is better, {toolA.name} or {toolB.name}?</h3>
+      <p class="text-gray-600">{winner ? `${winner.name} has a higher overall score with a ${winner.rating}/5 rating. However, both tools excel in different areas of ${toolA.category}.` : `Both tools are closely matched. Your choice depends on specific needs and budget.`}</p>
+    </div>
+
+    <div class="mb-6 border-b border-gray-200 pb-6">
+      <h3 class="text-lg font-semibold mb-2">Is {toolA.name} cheaper than {toolB.name}?</h3>
+      <p class="text-gray-600">{toolA.name} starts at {toolA.pricing?.startingPrice || 'custom pricing'}, while {toolB.name} starts at {toolB.pricing?.startingPrice || 'custom pricing'}. Compare both pricing pages for the most current information.</p>
+    </div>
+
+    <div class="mb-6 border-b border-gray-200 pb-6">
+      <h3 class="text-lg font-semibold mb-2">Can I switch from {toolA.name} to {toolB.name}?</h3>
+      <p class="text-gray-600">Yes, switching between {toolA.category} tools is common. Most platforms offer data export features and onboarding support to help with migration.</p>
+    </div>
+  </section>
+
+  <!-- Related Comparisons -->
+  <div class="mt-8 text-sm text-gray-500">
+    <p>See also: <a href={`/alternatives/${toolA.slug}`} class="text-blue-600 hover:underline">{toolA.name} Alternatives</a> | <a href={`/alternatives/${toolB.slug}`} class="text-blue-600 hover:underline">{toolB.name} Alternatives</a></p>
+  </div>
+</BaseLayout>
