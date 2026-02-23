@@ -1,0 +1,15 @@
+{
+  "name": "Restb.ai",
+  "slug": "restb-ai",
+  "tagline": "Computer vision AI that automatically tags, describes, and analyzes real estate photos",
+  "description": "Restb.ai uses computer vision and deep learning to automatically analyze real estate listing photos. It identifies room types, architectural features, conditions, and amenities from images, then generates accurate property descriptions and tags. Used by MLSs and portals to improve listing data quality at scale.",
+  "category": "Analytics & Market Data",
+  "url": "https://www.restb.ai",
+  "pricing": { "model": "enterprise" },
+  "features": ["AI photo tagging", "Room type detection", "Property condition assessment", "Auto-generated descriptions", "Amenity identification", "MLS integration", "Compliance checking", "API access"],
+  "pros": ["Unique computer vision technology", "Improves listing data quality", "Scales to millions of photos", "MLS-grade accuracy"],
+  "cons": ["Enterprise only", "B2B focus (not for individual agents)", "Requires integration"],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-23",
+  "tags": ["computer-vision", "photo-analysis", "mls", "listing-data", "enterprise"]
+}

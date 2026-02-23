@@ -1,0 +1,15 @@
+{
+  "name": "Roof AI",
+  "slug": "roof-ai",
+  "tagline": "AI chatbot that qualifies real estate leads and books appointments 24/7",
+  "description": "Roof AI is an AI-powered chatbot designed specifically for real estate websites. It engages visitors in natural conversation, qualifies them as buyers or sellers, captures their requirements, and books appointments directly on agents' calendars. Works 24/7 and integrates with major real estate CRMs.",
+  "category": "Lead Generation",
+  "url": "https://www.roof.ai",
+  "pricing": { "model": "paid", "startingPrice": "$199/mo" },
+  "features": ["AI chatbot for real estate", "Lead qualification", "Appointment booking", "24/7 availability", "Natural language conversations", "CRM integrations", "Website widget", "Multi-language support"],
+  "pros": ["Purpose-built for real estate", "Natural conversation flow", "Direct calendar booking", "Multi-language"],
+  "cons": ["Chat-only (no voice)", "Needs website traffic to be effective", "Monthly subscription"],
+  "rating": 4.0,
+  "lastUpdated": "2026-02-23",
+  "tags": ["chatbot", "lead-qualification", "appointment-booking", "website", "lead-generation"]
+}

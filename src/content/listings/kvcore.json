@@ -1,0 +1,15 @@
+{
+  "name": "kvCORE",
+  "slug": "kvcore",
+  "tagline": "AI-powered real estate platform with smart CRM, IDX websites, and automated marketing",
+  "description": "kvCORE (by Inside Real Estate) is a comprehensive real estate technology platform that combines AI-powered CRM, IDX websites, lead generation, and automated marketing. Its AI assistant handles lead routing, behavioral tracking, and smart campaigns. Used by over 3,000 brokerages and teams nationwide.",
+  "category": "CRM & Follow-up",
+  "url": "https://www.insiderealestate.com/kvcore",
+  "pricing": { "model": "paid", "startingPrice": "$499/mo" },
+  "features": ["AI-powered CRM", "IDX website builder", "Behavioral lead tracking", "Smart drip campaigns", "Automated lead routing", "Text/email automation", "Social media marketing", "Transaction management", "Mobile app"],
+  "pros": ["All-in-one platform", "Used by 3000+ brokerages", "Strong behavioral tracking", "Built-in IDX"],
+  "cons": ["Steep learning curve", "Higher price point", "Can feel overwhelming"],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-23",
+  "tags": ["crm", "idx-website", "lead-generation", "marketing-automation", "brokerage"]
+}

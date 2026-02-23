@@ -1,0 +1,15 @@
+{
+  "name": "AI HomeDesign",
+  "slug": "ai-homedesign",
+  "tagline": "AI interior design and renovation visualization for real estate listings",
+  "description": "AI HomeDesign uses artificial intelligence to transform real estate photos with virtual renovations, interior redesigns, and landscaping changes. Agents can show buyers the potential of a property by visualizing kitchen remodels, bathroom upgrades, or complete interior redesigns — all from a single photo.",
+  "category": "Virtual Staging",
+  "url": "https://www.aihomedesign.com",
+  "pricing": { "model": "freemium", "startingPrice": "$29/mo" },
+  "features": ["Virtual renovation", "Interior redesign", "Kitchen remodeling viz", "Bathroom upgrade viz", "Landscaping design", "Before/after comparison", "Multiple style options"],
+  "pros": ["Shows renovation potential", "Helps buyers visualize changes", "Multiple room types", "Free tier available"],
+  "cons": ["Less focused on staging", "Newer platform", "Smaller template library"],
+  "rating": 3.8,
+  "lastUpdated": "2026-02-23",
+  "tags": ["virtual-staging", "renovation", "interior-design", "visualization", "listing-photos"]
+}

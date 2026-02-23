@@ -1,0 +1,15 @@
+{
+  "name": "Offrs",
+  "slug": "offrs",
+  "tagline": "AI predictive analytics identifying homeowners most likely to sell within 12 months",
+  "description": "Offrs uses AI and predictive analytics to identify homeowners most likely to sell their property within the next 12 months. The platform analyzes over 250 data points per property including mortgage data, equity positions, life events, and market conditions. Provides exclusive seller leads with territory protection.",
+  "category": "Lead Generation",
+  "url": "https://www.offrs.com",
+  "pricing": { "model": "paid", "startingPrice": "$399/mo" },
+  "features": ["Predictive seller identification", "250+ data points per property", "Territory exclusivity", "Automated marketing", "Landing pages", "Lead nurturing", "ISA services available", "RAIA AI assistant"],
+  "pros": ["Territory exclusivity", "Strong prediction accuracy", "Includes AI assistant RAIA", "Automated marketing"],
+  "cons": ["Territory lock-in", "Premium pricing", "Results take 3-6 months"],
+  "rating": 3.9,
+  "lastUpdated": "2026-02-23",
+  "tags": ["lead-generation", "predictive-analytics", "seller-leads", "territory-exclusive"]
+}

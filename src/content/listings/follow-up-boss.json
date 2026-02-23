@@ -1,0 +1,15 @@
+{
+  "name": "Follow Up Boss",
+  "slug": "follow-up-boss",
+  "tagline": "The #1 rated real estate CRM with AI-powered lead management and team routing",
+  "description": "Follow Up Boss is the most popular CRM among high-performing real estate teams. Features AI-powered lead distribution, automated action plans, and integrations with 250+ lead sources. Known for its clean interface and powerful automation that helps agents respond to leads faster and convert more consistently.",
+  "category": "CRM & Follow-up",
+  "url": "https://www.followupboss.com",
+  "pricing": { "model": "paid", "startingPrice": "$58/mo" },
+  "features": ["AI lead distribution", "250+ integrations", "Action plans automation", "Speed-to-lead alerts", "Team management", "Calling & texting built-in", "Reporting dashboard", "Mobile app"],
+  "pros": ["Clean, intuitive interface", "Best-in-class integrations", "Excellent for teams", "Affordable starting price"],
+  "cons": ["No built-in IDX website", "AI features less advanced than competitors", "Add-ons increase cost"],
+  "rating": 4.5,
+  "lastUpdated": "2026-02-23",
+  "tags": ["crm", "lead-management", "team-management", "integrations", "automation"]
+}

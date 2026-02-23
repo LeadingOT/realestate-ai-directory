@@ -1,0 +1,15 @@
+{
+  "name": "Epique AI",
+  "slug": "epique-ai",
+  "tagline": "Free AI writing assistant built specifically for real estate agents",
+  "description": "Epique AI is a free AI-powered writing tool designed exclusively for real estate professionals. It generates listing descriptions, blog posts, social media content, email newsletters, and even complete marketing campaigns. Also includes AI-powered CMA narrative generation and a real estate-specific knowledge base.",
+  "category": "Marketing & Content",
+  "url": "https://www.epique.ai",
+  "pricing": { "model": "free" },
+  "features": ["AI listing descriptions", "Blog post generator", "Social media content", "Email newsletter writer", "CMA narratives", "Marketing campaign builder", "Real estate knowledge base", "Hashtag generator"],
+  "pros": ["Completely free", "Built for real estate", "Wide range of content types", "No signup hassles"],
+  "cons": ["Output quality varies", "Limited customization", "No visual/design features"],
+  "rating": 4.0,
+  "lastUpdated": "2026-02-23",
+  "tags": ["content-creation", "listing-descriptions", "free", "writing", "marketing"]
+}

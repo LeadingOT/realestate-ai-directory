@@ -1,0 +1,15 @@
+{
+  "name": "Virtual Staging AI",
+  "slug": "virtual-staging-ai",
+  "tagline": "One-click AI virtual staging with 40+ design styles starting at $16/photo",
+  "description": "Virtual Staging AI offers one-click virtual staging powered by artificial intelligence. Upload an empty room photo and choose from 40+ design styles to get a professionally staged image in seconds. Also offers furniture removal, renovation visualization, and exterior remodeling. Pay-per-photo model with no subscription required.",
+  "category": "Virtual Staging",
+  "url": "https://www.virtualstagingai.app",
+  "pricing": { "model": "paid", "startingPrice": "$16/photo" },
+  "features": ["One-click staging", "40+ design styles", "Furniture removal", "Renovation visualization", "Exterior remodeling", "No subscription needed", "Instant results", "Commercial staging"],
+  "pros": ["No subscription — pay per photo", "40+ styles", "Includes renovation visualization", "Quick results"],
+  "cons": ["Per-photo pricing adds up for heavy users", "Less customization than competitors", "No video features"],
+  "rating": 4.2,
+  "lastUpdated": "2026-02-23",
+  "tags": ["virtual-staging", "photo-editing", "listing-photos", "pay-per-use", "renovation"]
+}

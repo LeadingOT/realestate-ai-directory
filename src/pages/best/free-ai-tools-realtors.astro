@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+
+const allListings = await getCollection('listings');
+const freeTools = allListings.filter(l => 
+  l.data.pricing.model === 'free' || l.data.pricing.model === 'freemium'
+).map(l => l.data);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best Free AI Tools for Real Estate Agents (2026)',
+  description: 'Free and freemium AI tools for realtors. Virtual staging, marketing, design, and more — no subscription required.',
+  datePublished: '2026-02-23',
+  dateModified: '2026-02-23',
+};
+
+const faqs = [
+  { question: 'Are there free AI tools for real estate agents?', answer: 'Yes. Epique AI offers completely free AI-powered writing for listing descriptions, blog posts, and marketing content. Canva has a free tier with AI design features. REimagineHome gives 5 free virtual staging images. ChatGPT can also be used free for drafting listings, emails, and marketing copy.' },
+  { question: 'What is the best free AI for writing listing descriptions?', answer: 'Epique AI is the best free option specifically built for real estate. It generates listing descriptions, blog posts, social media content, and CMA narratives at no cost. ChatGPT is also excellent for listing descriptions but requires more prompting.' },
+  { question: 'Can I stage listings with AI for free?', answer: 'REimagineHome offers 5 free AI-staged images to get started. After that, paid plans start at $14/month. AI HomeDesign also has a free tier for renovation visualization.' },
+  { question: 'Is free AI good enough for real estate marketing?', answer: 'For getting started, absolutely. Free tools like Epique AI, Canva, and ChatGPT can handle 80% of content creation needs. As your business grows, paid tools like Trolto ($59/mo) and Scout ($200/mo) offer more automation and specialization.' },
+];
+---
+
+<BaseLayout
+  title="Best Free AI Tools for Real Estate Agents (2026)"
+  description="Free and freemium AI tools every realtor should know. Virtual staging, listing descriptions, design, and marketing — all without a subscription."
+  schema={schema}
+>
+  <article class="max-w-4xl">
+    <div class="mb-2 text-sm text-gray-500">
+      <a href="/" class="hover:text-blue-600">Home</a> / <a href="/best" class="hover:text-blue-600">Best Of</a> / Free AI Tools
+    </div>
+    <h1 class="text-3xl font-bold mb-4">Best Free AI Tools for Real Estate Agents (2026)</h1>
+    <p class="text-gray-600 mb-8">You don't need a big budget to start using AI in your real estate business. These tools offer powerful AI features for free or with generous free tiers.</p>
+
+    <section class="space-y-6">
+      {freeTools.map((tool) => (
+        <div class="border border-gray-200 rounded-lg p-6">
+          <div class="flex items-start justify-between mb-2">
+            <h2 class="text-xl font-bold">{tool.name}</h2>
+            <span class={`text-xs font-medium px-2 py-1 rounded-full ${tool.pricing.model === 'free' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}`}>
+              {tool.pricing.model === 'free' ? '100% Free' : `Freemium · ${tool.pricing.startingPrice}`}
+            </span>
+          </div>
+          <p class="text-gray-600 mb-3">{tool.tagline}</p>
+          <p class="text-sm text-gray-700 mb-3">{tool.description}</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            {tool.features.slice(0, 5).map((f: string) => (
+              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{f}</span>
+            ))}
+          </div>
+          <a href={`/listing/${tool.slug}`} class="text-blue-600 text-sm hover:underline">Full review →</a>
+        </div>
+      ))}
+    </section>
+
+    <FAQSection faqs={faqs} />
+  </article>
+</BaseLayout>
