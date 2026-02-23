@@ -1,0 +1,38 @@
+{
+  "name": "Sidekick by Structurely",
+  "slug": "sidekick-structurely",
+  "tagline": "AI conversation assistant that qualifies and nurtures leads via text",
+  "description": "Sidekick by Structurely is an AI-powered conversation assistant that engages real estate leads through natural text conversations. It qualifies leads, schedules appointments, and nurtures prospects 24/7. The AI handles the initial back-and-forth so agents can focus on ready-to-act clients.",
+  "category": "Lead Generation",
+  "url": "https://www.structurely.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$149/mo"
+  },
+  "features": [
+    "AI text conversations",
+    "Lead qualification",
+    "Appointment scheduling",
+    "24/7 availability",
+    "Natural language processing",
+    "CRM integration",
+    "Lead scoring"
+  ],
+  "pros": [
+    "Natural conversational AI",
+    "Handles lead qualification",
+    "Works 24/7"
+  ],
+  "cons": [
+    "Text-only (no voice)",
+    "Requires lead source integration"
+  ],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lead-generation",
+    "ai-chat",
+    "lead-qualification",
+    "appointment-scheduling"
+  ]
+}

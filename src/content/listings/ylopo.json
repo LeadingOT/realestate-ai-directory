@@ -1,0 +1,39 @@
+{
+  "name": "Ylopo",
+  "slug": "ylopo",
+  "tagline": "AI-first lead generation with voice and text nurturing assistants",
+  "description": "Ylopo is an AI-first lead generation and nurturing platform featuring AI-powered texting and voice assistants. When a new lead is generated, their AI voice assistant calls on your behalf using a nearly human-indistinguishable voice. Also offers AI-powered video ads that automatically create high-converting Meta ads from MLS listing data.",
+  "category": "Lead Generation",
+  "url": "https://www.ylopo.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$600/mo"
+  },
+  "features": [
+    "AI voice assistant",
+    "AI text nurturing",
+    "AI-powered Meta video ads",
+    "MLS integration",
+    "CRM integrations",
+    "Lead qualification",
+    "Automated follow-up"
+  ],
+  "pros": [
+    "Human-like AI voice calls",
+    "Automated video ad creation",
+    "Strong CRM integrations"
+  ],
+  "cons": [
+    "Higher price point",
+    "Requires Meta ad spend on top"
+  ],
+  "rating": 4.4,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lead-generation",
+    "ai-voice",
+    "lead-nurturing",
+    "meta-ads",
+    "video-marketing"
+  ]
+}

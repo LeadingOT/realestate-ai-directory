@@ -1,0 +1,38 @@
+{
+  "name": "Collov AI",
+  "slug": "collov-ai",
+  "tagline": "Affordable AI virtual staging at $16/month for 60 staged photos",
+  "description": "Collov offers realistic AI-powered virtual home staging at a fraction of competitors' costs. Creates high-quality staged photos comparable to traditional virtual staging, plus includes AI photo editing tools for changing floors, cabinets, and replacing furniture. AI virtual tour videos from still photos also available.",
+  "category": "Virtual Staging",
+  "url": "https://www.collov.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$16/mo"
+  },
+  "features": [
+    "AI virtual staging",
+    "Furniture removal",
+    "Wall replacement",
+    "Floor replacement",
+    "Cabinet replacement",
+    "AI virtual tour videos",
+    "Countertop replacement"
+  ],
+  "pros": [
+    "Very affordable",
+    "Realistic results",
+    "Includes video tours"
+  ],
+  "cons": [
+    "Advanced features still in beta",
+    "Less design flexibility"
+  ],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "virtual-staging",
+    "photo-editing",
+    "listing-photos",
+    "affordable"
+  ]
+}

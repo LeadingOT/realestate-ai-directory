@@ -1,0 +1,38 @@
+{
+  "name": "HouseCanary",
+  "slug": "housecanary",
+  "tagline": "AI-powered property valuation and analytics covering 100M+ properties",
+  "description": "HouseCanary provides AI-powered property valuations and market analytics covering over 100 million U.S. residential properties. Their automated valuation models (AVMs) deliver accurate property value estimates, while their analytics platform provides deep market insights for investment decisions.",
+  "category": "Analytics & Market Data",
+  "url": "https://www.housecanary.com",
+  "pricing": {
+    "model": "enterprise"
+  },
+  "features": [
+    "Automated valuation models",
+    "100M+ property coverage",
+    "Market analytics",
+    "Investment analysis",
+    "API access",
+    "Forecasting models",
+    "Comparable analysis"
+  ],
+  "pros": [
+    "Massive property database",
+    "Institutional-grade accuracy",
+    "API available"
+  ],
+  "cons": [
+    "Enterprise pricing",
+    "Geared toward investors/lenders"
+  ],
+  "rating": 4.5,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "valuation",
+    "analytics",
+    "market-data",
+    "investment",
+    "avm"
+  ]
+}

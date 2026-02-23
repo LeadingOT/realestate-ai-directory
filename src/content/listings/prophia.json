@@ -1,0 +1,38 @@
+{
+  "name": "Prophia",
+  "slug": "prophia",
+  "tagline": "AI + human hybrid lease abstraction with 99% accuracy and the largest CRE dataset",
+  "description": "Prophia combines AI automation with human expert oversight for commercial real estate lease abstraction. Maintains the largest private CRE dataset trained on billions of lease provisions. Offers self-service AI extraction of 35+ terms and premium service extracting 215+ terms with 99% accuracy.",
+  "category": "Transaction Management",
+  "url": "https://www.prophia.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$20/document"
+  },
+  "features": [
+    "35+ lease term extraction",
+    "215+ terms (premium)",
+    "99% accuracy",
+    "Human review included",
+    "Living abstracts",
+    "Smart Search",
+    "30+ year old document support"
+  ],
+  "pros": [
+    "Human + AI accuracy",
+    "Handles old/poor quality docs",
+    "Pay per document option"
+  ],
+  "cons": [
+    "Per-document pricing adds up",
+    "3-day turnaround for premium"
+  ],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lease-abstraction",
+    "commercial-real-estate",
+    "document-processing",
+    "human-in-the-loop"
+  ]
+}

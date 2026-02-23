@@ -1,0 +1,40 @@
+{
+  "name": "Canva",
+  "slug": "canva",
+  "tagline": "AI-powered design platform with templates perfect for real estate marketing",
+  "description": "While primarily a graphic design platform, Canva has integrated AI features that assist real estate agents in creating marketing materials. AI suggests design layouts, color schemes, and copy. Extensive template library includes real estate-specific templates for social media, brochures, and listing presentations.",
+  "category": "Marketing & Content",
+  "url": "https://www.canva.com",
+  "pricing": {
+    "model": "freemium",
+    "startingPrice": "$120/year"
+  },
+  "features": [
+    "AI design suggestions",
+    "Real estate templates",
+    "Drag-and-drop editor",
+    "Social media sizing",
+    "Brand kit",
+    "Video editing",
+    "Print design"
+  ],
+  "pros": [
+    "Free version available",
+    "Huge template library",
+    "Very easy to use"
+  ],
+  "cons": [
+    "Not real estate-specific",
+    "AI features still basic",
+    "Generic templates"
+  ],
+  "rating": 4.4,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "design",
+    "marketing",
+    "social-media",
+    "templates",
+    "content-creation"
+  ]
+}

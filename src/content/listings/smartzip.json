@@ -1,0 +1,38 @@
+{
+  "name": "SmartZip",
+  "slug": "smartzip",
+  "tagline": "Predictive analytics platform that predicted 72% of listings using AI",
+  "description": "SmartZip aggregates hundreds of data points from more than 25 sources and uses AI-powered predictive analytics to determine homeowners most likely to move within 6-12 months. With 72% prediction accuracy and over one billion data points analyzed, it provides agents with a CRM pre-populated with warm seller leads.",
+  "category": "Lead Generation",
+  "url": "https://www.smartzip.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$500/mo"
+  },
+  "features": [
+    "Predictive seller identification",
+    "1B+ data points analyzed",
+    "72% prediction accuracy",
+    "Pre-populated CRM",
+    "Automated direct mail",
+    "Landing pages",
+    "Zip code targeting"
+  ],
+  "pros": [
+    "Industry-leading prediction accuracy",
+    "Massive data sources",
+    "Automated marketing included"
+  ],
+  "cons": [
+    "Premium pricing",
+    "Best suited for listing agents only"
+  ],
+  "rating": 4.2,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lead-generation",
+    "predictive-analytics",
+    "seller-leads",
+    "data-analytics"
+  ]
+}

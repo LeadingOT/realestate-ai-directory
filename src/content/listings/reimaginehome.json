@@ -1,0 +1,38 @@
+{
+  "name": "REimagineHome",
+  "slug": "reimaginehome",
+  "tagline": "AI virtual staging with flexible design options and free starter images",
+  "description": "REimagineHome offers AI-powered virtual staging, exterior enhancement, and sky replacement with more design flexibility than competitors. Choose room types, furniture styles, color themes, and even create landscape designs. First 5 AI-generated images are free.",
+  "category": "Virtual Staging",
+  "url": "https://www.reimaginehome.ai",
+  "pricing": {
+    "model": "freemium",
+    "startingPrice": "$14/mo"
+  },
+  "features": [
+    "Virtual staging",
+    "Exterior enhancement",
+    "Sky replacement",
+    "Color theme selection",
+    "Landscape design",
+    "Room type customization",
+    "Furniture style selection"
+  ],
+  "pros": [
+    "5 free images to start",
+    "More design flexibility",
+    "Affordable paid plans"
+  ],
+  "cons": [
+    "Quality varies by room type",
+    "Limited advanced editing"
+  ],
+  "rating": 4,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "virtual-staging",
+    "photo-editing",
+    "listing-photos",
+    "design"
+  ]
+}

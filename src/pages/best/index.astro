@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const guides = [
+  { title: 'Best AI Lead Generation Tools for Real Estate', slug: 'ai-lead-generation', count: 5, description: 'AI-powered tools to find and qualify buyer and seller leads automatically.' },
+  { title: 'Best AI Virtual Staging Tools', slug: 'ai-virtual-staging', count: 3, description: 'Stage empty listings with AI for a fraction of traditional staging costs.' },
+  { title: 'Best AI CRMs for Real Estate Agents', slug: 'ai-crm', count: 4, description: 'CRM platforms with built-in AI for lead nurturing and follow-up.' },
+  { title: 'Best AI Marketing Tools for Realtors', slug: 'ai-marketing', count: 4, description: 'Create listing videos, social content, and email campaigns with AI.' },
+  { title: 'Best AI Property Valuation Tools', slug: 'ai-property-valuation', count: 2, description: 'AI-powered AVMs and market analytics for accurate property valuations.' },
+  { title: 'Best AI Tools for Commercial Real Estate', slug: 'ai-commercial-real-estate', count: 4, description: 'Lease abstraction, document processing, and analytics for CRE professionals.' },
+];
+---
+
+<BaseLayout
+  title="Best AI Tools for Real Estate - Comparison Guides (2026)"
+  description="In-depth comparison guides for the best AI tools across real estate categories. Lead generation, staging, CRM, marketing, and more."
+>
+  <h1 class="text-3xl font-bold mb-2">Best Of Guides</h1>
+  <p class="text-gray-600 mb-8">In-depth comparisons to help you pick the right AI tool for your needs.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {guides.map((guide) => (
+      <a href={`/best/${guide.slug}`} class="block border border-gray-200 rounded-lg p-6 hover:shadow-md hover:border-blue-300 transition-all">
+        <h2 class="text-lg font-semibold mb-2">{guide.title}</h2>
+        <p class="text-sm text-gray-600 mb-3">{guide.description}</p>
+        <span class="text-xs text-blue-600">{guide.count} tools compared →</span>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

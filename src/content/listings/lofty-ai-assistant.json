@@ -1,0 +1,38 @@
+{
+  "name": "Lofty AI Assistant",
+  "slug": "lofty-ai-assistant",
+  "tagline": "AI-powered CRM with intelligent chat assistant for lead conversion",
+  "description": "Lofty (formerly Chime) offers an AI-enhanced CRM platform with an intelligent chat assistant that engages leads 24/7. The AI handles initial conversations, qualifies leads, and routes hot prospects to agents. Combines CRM functionality with AI-powered communication tools.",
+  "category": "CRM & Follow-up",
+  "url": "https://www.lofty.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "Custom pricing"
+  },
+  "features": [
+    "AI chat assistant",
+    "24/7 lead engagement",
+    "Lead qualification",
+    "CRM platform",
+    "Automated follow-up",
+    "Lead routing",
+    "Pipeline management"
+  ],
+  "pros": [
+    "24/7 automated lead engagement",
+    "Full CRM included",
+    "Smart lead routing"
+  ],
+  "cons": [
+    "Custom pricing",
+    "Learning curve for full platform"
+  ],
+  "rating": 4.2,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "crm",
+    "ai-chat",
+    "lead-qualification",
+    "lead-nurturing"
+  ]
+}

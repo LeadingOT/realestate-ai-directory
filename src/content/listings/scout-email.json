@@ -1,0 +1,38 @@
+{
+  "name": "Scout",
+  "slug": "scout-email",
+  "tagline": "AI email marketing with lead enrichment and personalized campaigns",
+  "description": "Scout provides AI-powered email marketing specifically for real estate agents. It enriches leads with details like birthdays and home information (bedrooms, baths, ownership length), then creates automated, personalized email campaigns. Includes an AI email template library and writing assistance.",
+  "category": "Marketing & Content",
+  "url": "https://www.scoutemail.com",
+  "pricing": {
+    "model": "freemium",
+    "startingPrice": "$200/mo"
+  },
+  "features": [
+    "AI email writing",
+    "Lead enrichment",
+    "Personalized campaigns",
+    "Template library",
+    "Birthday/home details",
+    "Automated drip campaigns",
+    "Contact enhancement"
+  ],
+  "pros": [
+    "Free version available",
+    "Rich lead enrichment data",
+    "AI-written emails"
+  ],
+  "cons": [
+    "Email-only channel",
+    "Paid plans are pricey"
+  ],
+  "rating": 3.9,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "email-marketing",
+    "lead-enrichment",
+    "marketing-automation",
+    "personalization"
+  ]
+}

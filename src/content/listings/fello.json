@@ -1,0 +1,39 @@
+{
+  "name": "Fello",
+  "slug": "fello",
+  "tagline": "AI-powered CRM add-on that converts your existing database into seller leads",
+  "description": "Fello integrates with any CRM to identify, score, and convert leads most likely to sell their home in the next six months. It analyzes each lead in your database, scores them based on sell likelihood, and creates hyper-personalized AI marketing campaigns to nurture them until they're ready to talk.",
+  "category": "CRM & Follow-up",
+  "url": "https://www.hifello.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$165/mo"
+  },
+  "features": [
+    "AI lead scoring",
+    "Database enrichment",
+    "Any CRM integration",
+    "Personalized campaigns",
+    "Property records lookup",
+    "Contact enrichment",
+    "Seller prediction"
+  ],
+  "pros": [
+    "Works with existing CRM",
+    "Affordable entry point",
+    "Great for large databases"
+  ],
+  "cons": [
+    "Focused on seller conversion only",
+    "Requires existing database"
+  ],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "crm",
+    "lead-scoring",
+    "seller-leads",
+    "database-enrichment",
+    "marketing-automation"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Rechat",
+  "slug": "rechat",
+  "tagline": "All-in-one AI assistant Lucy that creates marketing, websites, and CMAs in seconds",
+  "description": "Rechat's AI assistant Lucy is a proactive personal assistant accessible on your phone. It creates marketing materials for listings (digital and print), builds branded websites in seconds, produces competitive market analyses, and personalizes client communication — all automatically.",
+  "category": "Marketing & Content",
+  "url": "https://www.rechat.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "Custom pricing"
+  },
+  "features": [
+    "AI assistant Lucy",
+    "CMA generation",
+    "Website builder",
+    "Social media content",
+    "Print marketing",
+    "Mobile access",
+    "Listing marketing automation"
+  ],
+  "pros": [
+    "All-in-one solution",
+    "Mobile-first experience",
+    "Instant website creation"
+  ],
+  "cons": [
+    "Custom pricing (not transparent)",
+    "May overlap with existing tools"
+  ],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "marketing",
+    "ai-assistant",
+    "cma",
+    "website-builder",
+    "content-creation"
+  ]
+}

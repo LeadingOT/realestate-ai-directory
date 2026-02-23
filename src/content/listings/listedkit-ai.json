@@ -1,0 +1,38 @@
+{
+  "name": "ListedKit AI",
+  "slug": "listedkit-ai",
+  "tagline": "AI-powered transaction management that automates coordination busywork",
+  "description": "ListedKit uses AI to streamline real estate transaction management, automating the coordination tasks that eat up agents' time. From contract to close, it tracks deadlines, manages documents, coordinates with all parties, and ensures nothing falls through the cracks.",
+  "category": "Transaction Management",
+  "url": "https://www.listedkit.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$29/mo"
+  },
+  "features": [
+    "AI transaction tracking",
+    "Deadline management",
+    "Document management",
+    "Party coordination",
+    "Task automation",
+    "Timeline visualization",
+    "Template library"
+  ],
+  "pros": [
+    "Affordable",
+    "Saves hours per transaction",
+    "Easy to learn"
+  ],
+  "cons": [
+    "Focused on transactions only",
+    "Limited CRM features"
+  ],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "transaction-management",
+    "productivity",
+    "automation",
+    "document-management"
+  ]
+}

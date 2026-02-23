@@ -1,0 +1,40 @@
+{
+  "name": "Top Producer Smart Targeting",
+  "slug": "top-producer-smart-targeting",
+  "tagline": "AI-powered predictive analytics to identify likely sellers in your farm area",
+  "description": "Top Producer Smart Targeting combines one of real estate's most popular CRMs with proprietary AI that identifies the top 20% of likely sellers in your farm area. It uses AI to analyze data and market trends, then provides automated marketing campaigns including online ads, email marketing, postcards, and handwritten letters to reach them.",
+  "category": "Lead Generation",
+  "url": "https://www.topproducer.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$599/mo"
+  },
+  "features": [
+    "Predictive seller analytics",
+    "Integrated CRM",
+    "Automated marketing campaigns",
+    "Zip code targeting",
+    "Custom farm areas",
+    "Email marketing",
+    "Direct mail automation",
+    "Lead follow-up automation"
+  ],
+  "pros": [
+    "Built-in CRM included",
+    "Automated multichannel marketing",
+    "Great for listing agents"
+  ],
+  "cons": [
+    "Higher price point",
+    "Requires farm area commitment"
+  ],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lead-generation",
+    "predictive-analytics",
+    "crm",
+    "seller-leads",
+    "farming"
+  ]
+}

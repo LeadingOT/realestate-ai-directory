@@ -1,0 +1,39 @@
+{
+  "name": "CoreLogic",
+  "slug": "corelogic",
+  "tagline": "Industry-leading property data and analytics platform with AI insights",
+  "description": "CoreLogic is the industry standard for property data, analytics, and AI-powered market insights. Provides comprehensive property records, MLS data, mortgage information, and predictive analytics used by agents, brokers, lenders, and investors across the real estate ecosystem.",
+  "category": "Analytics & Market Data",
+  "url": "https://www.corelogic.com",
+  "pricing": {
+    "model": "enterprise"
+  },
+  "features": [
+    "Property records database",
+    "MLS data access",
+    "Predictive analytics",
+    "Market trends",
+    "Risk analytics",
+    "Mortgage data",
+    "Flood/climate risk assessment"
+  ],
+  "pros": [
+    "Most comprehensive data source",
+    "Industry standard",
+    "Deep analytics"
+  ],
+  "cons": [
+    "Enterprise-only pricing",
+    "Complex platform",
+    "Not for individual agents"
+  ],
+  "rating": 4.6,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "analytics",
+    "market-data",
+    "property-data",
+    "enterprise",
+    "risk-assessment"
+  ]
+}

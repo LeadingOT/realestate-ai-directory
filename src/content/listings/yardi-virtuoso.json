@@ -1,0 +1,39 @@
+{
+  "name": "Yardi Virtuoso",
+  "slug": "yardi-virtuoso",
+  "tagline": "First AI agent marketplace in real estate with role-specific agents",
+  "description": "Yardi Virtuoso is positioned as the first AI agent marketplace in real estate, allowing users to deploy role-specific AI agents for asset managers, property managers, accountants, and leasing staff. Integrates directly with the Yardi property management ecosystem.",
+  "category": "Property Management",
+  "url": "https://www.yardi.com",
+  "pricing": {
+    "model": "enterprise"
+  },
+  "features": [
+    "AI agent marketplace",
+    "Role-specific agents",
+    "Asset management AI",
+    "Property management AI",
+    "Accounting AI",
+    "Leasing AI",
+    "Yardi ecosystem integration"
+  ],
+  "pros": [
+    "First AI agent marketplace for RE",
+    "Deep Yardi integration",
+    "Role-specific agents"
+  ],
+  "cons": [
+    "Requires Yardi ecosystem",
+    "Enterprise only",
+    "New product (limited track record)"
+  ],
+  "rating": 4,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "property-management",
+    "ai-agents",
+    "enterprise",
+    "yardi",
+    "automation"
+  ]
+}

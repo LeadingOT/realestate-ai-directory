@@ -1,0 +1,39 @@
+{
+  "name": "Real Geeks",
+  "slug": "real-geeks",
+  "tagline": "AI chat plus SEO Fast Track for ranking on search engines",
+  "description": "Real Geeks offers Geek AI for lead chat engagement plus an AI-driven SEO Fast Track upgrade for ranking on search engines. The platform combines IDX websites, CRM, and AI tools to help agents generate and convert leads through both organic search and direct engagement.",
+  "category": "CRM & Follow-up",
+  "url": "https://www.realgeeks.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$299/mo"
+  },
+  "features": [
+    "Geek AI chatbot",
+    "SEO Fast Track",
+    "IDX websites",
+    "CRM",
+    "Lead generation",
+    "Facebook ads integration",
+    "Market reports"
+  ],
+  "pros": [
+    "SEO + AI combo",
+    "Affordable starting price",
+    "All-in-one platform"
+  ],
+  "cons": [
+    "Website templates can feel dated",
+    "SEO results take time"
+  ],
+  "rating": 4,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "crm",
+    "seo",
+    "idx-website",
+    "ai-chat",
+    "lead-generation"
+  ]
+}

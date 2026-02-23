@@ -1,0 +1,39 @@
+{
+  "name": "Trolto",
+  "slug": "trolto",
+  "tagline": "AI-powered listing marketing with cinematic videos from still photos",
+  "description": "Trolto creates professional-quality marketing content using AI, including cinematic fly-through videos from listing photos, Instagram Reels, and virtual staging. Its AI adds ultra-smooth pans and flyby effects synced to music, producing results virtually indistinguishable from professional videography.",
+  "category": "Marketing & Content",
+  "url": "https://www.trolto.com",
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$59/mo"
+  },
+  "features": [
+    "Cinematic listing videos",
+    "Instagram Reels creation",
+    "Virtual staging",
+    "Automated social posting",
+    "Music-synced effects",
+    "Content library",
+    "AI photo animation"
+  ],
+  "pros": [
+    "Professional-quality video from photos",
+    "Daily updated content library",
+    "One-stop marketing shop"
+  ],
+  "cons": [
+    "Video-focused only",
+    "Monthly subscription required"
+  ],
+  "rating": 4.2,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "marketing",
+    "video",
+    "social-media",
+    "listing-marketing",
+    "instagram"
+  ]
+}

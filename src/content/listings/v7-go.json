@@ -1,0 +1,40 @@
+{
+  "name": "V7 Go",
+  "slug": "v7-go",
+  "tagline": "AI-powered lease abstraction that processes documents 12x faster with 99.5% accuracy",
+  "description": "V7 Go is a generative AI platform for real estate document intelligence. It processes leases, amendments, and correspondence using OCR, RAG, and large language models. Reduces lease abstraction from 4-8 hours to 15-20 minutes with 99.5% accuracy. Features AI Citations linking every data point to its source document.",
+  "category": "Transaction Management",
+  "url": "https://www.v7labs.com/real-estate",
+  "pricing": {
+    "model": "enterprise"
+  },
+  "features": [
+    "Lease abstraction",
+    "99.5% accuracy",
+    "AI Citations audit trail",
+    "Multi-document processing",
+    "OCR + LLM pipeline",
+    "Yardi/MRI integration",
+    "SOC 2 + HIPAA compliant",
+    "8 specialized AI agents"
+  ],
+  "pros": [
+    "Highest accuracy in market",
+    "Full audit trail",
+    "Enterprise integrations"
+  ],
+  "cons": [
+    "Enterprise pricing",
+    "Geared toward commercial RE",
+    "Requires onboarding"
+  ],
+  "rating": 4.7,
+  "lastUpdated": "2026-02-23",
+  "tags": [
+    "lease-abstraction",
+    "document-processing",
+    "commercial-real-estate",
+    "enterprise",
+    "compliance"
+  ]
+}
