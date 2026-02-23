@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://example.com', // Will be replaced per-directory
+  site: 'https://realestateai.tools',
   vite: {
     plugins: [tailwindcss()]
   },
