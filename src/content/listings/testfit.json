@@ -1,0 +1,15 @@
+{
+  "name": "TestFit",
+  "slug": "testfit",
+  "tagline": "AI-powered building configurator for real estate feasibility studies",
+  "description": "TestFit is an AI building configurator that helps developers, architects, and brokers quickly test-fit buildings on parcels. It generates optimized building layouts in seconds, showing unit mixes, parking configurations, and financial pro formas. This dramatically reduces the time needed for feasibility studies from weeks to minutes, helping real estate professionals evaluate deals faster.",
+  "category": "Commercial",
+  "url": "https://testfit.io",
+  "pricing": { "model": "paid", "startingPrice": "$500/mo" },
+  "features": ["AI building configuration", "Instant site plans", "Unit mix optimization", "Parking layout generation", "Financial pro forma", "Zoning compliance checks", "Multi-building scenarios", "Export to CAD"],
+  "pros": ["Turns weeks of work into minutes", "Optimizes for profitability", "Multiple scenario testing", "Integrates with CAD tools"],
+  "cons": ["Expensive for small firms", "Steep learning curve", "Focused on multifamily/commercial"],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-24",
+  "tags": ["development", "feasibility", "commercial-real-estate", "architecture", "site-planning"]
+}

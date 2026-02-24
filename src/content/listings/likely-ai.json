@@ -1,0 +1,15 @@
+{
+  "name": "Likely.AI",
+  "slug": "likely-ai",
+  "tagline": "Predictive AI that identifies homeowners most likely to sell",
+  "description": "Likely.AI uses artificial intelligence and machine learning to predict which homeowners are most likely to sell their property. By analyzing hundreds of data signals — life events, financial indicators, property data, and behavioral patterns — it helps agents and brokerages focus their prospecting on the highest-probability leads, dramatically improving conversion rates and reducing marketing waste.",
+  "category": "Lead Generation",
+  "url": "https://likely.ai",
+  "pricing": { "model": "paid", "startingPrice": "$150/mo" },
+  "features": ["Predictive seller scoring", "Property data enrichment", "Life event detection", "CRM integrations", "Lead list building", "Automated data updates", "Skip tracing", "Portfolio monitoring"],
+  "pros": ["Highly accurate seller predictions", "Saves time on prospecting", "Integrates with popular CRMs", "Data enrichment included"],
+  "cons": ["Monthly subscription required", "US market focus", "Requires volume to see ROI"],
+  "rating": 4.2,
+  "lastUpdated": "2026-02-24",
+  "tags": ["lead-generation", "predictive-analytics", "seller-leads", "prospecting", "data"]
+}

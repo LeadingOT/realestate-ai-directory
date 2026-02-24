@@ -1,0 +1,15 @@
+{
+  "name": "Matterport",
+  "slug": "matterport",
+  "tagline": "AI-powered 3D virtual tours and digital twins for real estate",
+  "description": "Matterport creates immersive 3D virtual tours and digital twins of properties using AI. Agents can capture spaces with a smartphone or 3D camera, and Matterport's AI automatically generates dollhouse views, floor plans, measurements, and interactive walkthroughs. Used by top brokerages worldwide to showcase listings remotely and reduce unnecessary in-person showings.",
+  "category": "Virtual Tours",
+  "url": "https://matterport.com",
+  "pricing": { "model": "freemium", "startingPrice": "Free" },
+  "features": ["3D virtual tours", "AI-generated floor plans", "Dollhouse view", "Measurement tools", "Smartphone capture", "MLS-ready media", "Guided tours", "VR compatibility", "Cloud hosting", "Embed on any website"],
+  "pros": ["Free tier available", "Smartphone capture (no special camera needed)", "Industry-standard 3D tours", "Automatic measurements and floor plans"],
+  "cons": ["Premium features require paid plan", "Large properties need many scans", "Learning curve for best results"],
+  "rating": 4.5,
+  "lastUpdated": "2026-02-24",
+  "tags": ["virtual-tours", "3d", "floor-plans", "photography", "marketing", "free"]
+}

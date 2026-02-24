@@ -1,0 +1,15 @@
+{
+  "name": "Homebot",
+  "slug": "homebot",
+  "tagline": "AI-powered client engagement platform for real estate and mortgage professionals",
+  "description": "Homebot sends personalized, AI-generated home finance reports to past clients and prospects monthly. Each report shows updated home values, equity positions, refinance opportunities, and investment scenarios. This keeps agents top-of-mind with their sphere and generates repeat and referral business by providing ongoing value long after the transaction closes.",
+  "category": "Marketing",
+  "url": "https://homebot.ai",
+  "pricing": { "model": "paid", "startingPrice": "$25/mo" },
+  "features": ["Monthly home value reports", "Equity tracking", "Refinance alerts", "Investment analysis", "Personalized client portal", "Automated email delivery", "Buyer reports", "Agent branding"],
+  "pros": ["Very affordable", "High client engagement rates", "Keeps you top-of-mind", "Easy to set up"],
+  "cons": ["Limited customization options", "Reports can confuse some clients", "US-only"],
+  "rating": 4.3,
+  "lastUpdated": "2026-02-24",
+  "tags": ["client-engagement", "marketing", "home-value", "email", "sphere-of-influence"]
+}

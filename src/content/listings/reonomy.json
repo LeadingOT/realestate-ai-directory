@@ -1,0 +1,15 @@
+{
+  "name": "Reonomy",
+  "slug": "reonomy",
+  "tagline": "AI-powered commercial real estate intelligence and property data platform",
+  "description": "Reonomy is a commercial real estate data platform that uses AI to aggregate and analyze property records, ownership data, debt information, and transaction history across the US. It helps CRE professionals find off-market deals, identify property owners, and uncover investment opportunities by connecting disparate data sources into a unified, searchable platform.",
+  "category": "Commercial",
+  "url": "https://www.reonomy.com",
+  "pricing": { "model": "paid", "startingPrice": "Custom" },
+  "features": ["AI property search", "Owner identification", "Debt and mortgage data", "Transaction history", "Tenant information", "Building permits data", "Custom reporting", "API access", "Portfolio analysis"],
+  "pros": ["Comprehensive CRE data", "Powerful search filters", "Owner contact info included", "Good for off-market deals"],
+  "cons": ["Expensive for individual agents", "Commercial focus only", "Custom pricing lacks transparency"],
+  "rating": 4.0,
+  "lastUpdated": "2026-02-24",
+  "tags": ["commercial-real-estate", "property-data", "analytics", "investment", "data-platform"]
+}

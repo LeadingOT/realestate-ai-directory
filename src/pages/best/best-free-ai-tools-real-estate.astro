@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { getCollection } from 'astro:content';
+
+const allListings = await getCollection('listings');
+const slugs = ['matterport', 'plunk', 'canva', 'epique-ai', 'reimaginehome'];
+const tools = slugs.map(s => allListings.find(l => l.data.slug === s)!.data);
+const features = ['Free tier available', 'AI-powered', 'No credit card required', 'Marketing tools', 'Property valuation', 'Virtual staging', 'Content generation'];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best Free AI Tools for Real Estate Agents (2026)',
+  description: 'Discover the best free AI tools for real estate agents. Matterport, Plunk, Canva, Epique AI, and REimagineHome reviewed with features and limitations.',
+  datePublished: '2026-02-24',
+  dateModified: '2026-02-24',
+};
+
+const faqs = [
+  { question: 'Are there really free AI tools for real estate?', answer: 'Yes! Several AI tools offer genuinely useful free tiers. Matterport lets you create 3D tours for free (1 active space), Plunk provides free home valuations, Canva offers a generous free design plan with AI features, and Epique AI provides free AI-generated listing descriptions and social media content.' },
+  { question: 'What is the best free AI tool for real estate agents?', answer: 'It depends on your needs. For 3D virtual tours, Matterport\'s free tier is unbeatable. For marketing design, Canva\'s free plan is excellent. For listing content, Epique AI generates descriptions, social posts, and blog content at no cost. Plunk is the best free option for home valuations and renovation ROI analysis.' },
+  { question: 'Do free AI tools have limitations?', answer: 'Yes, free tiers typically have usage limits — fewer exports, watermarks, limited storage, or basic features. However, for solo agents or those just starting out, free tiers provide significant value and let you test tools before committing to paid plans.' },
+  { question: 'Can I run my entire real estate business on free AI tools?', answer: 'You can cover many bases — marketing with Canva, listing content with Epique AI, virtual tours with Matterport, and valuations with Plunk. However, for CRM, lead generation, and advanced analytics, you\'ll likely need paid solutions as your business scales.' },
+];
+---
+
+<BaseLayout
+  title="Best Free AI Tools for Real Estate Agents (2026) - No Cost, Real Value"
+  description="Discover the best free AI tools for real estate agents in 2026. Virtual tours, property valuations, marketing design, and listing content — all at no cost."
+  schema={schema}
+>
+  <article class="max-w-4xl">
+    <div class="mb-2 text-sm text-gray-500">
+      <a href="/" class="hover:text-blue-600">Home</a> / <a href="/best" class="hover:text-blue-600">Best Of</a> / Free AI Tools
+    </div>
+    <h1 class="text-3xl font-bold mb-4">Best Free AI Tools for Real Estate Agents (2026)</h1>
+    <p class="text-gray-600 mb-8">You don't need a big budget to leverage AI in your real estate business. These tools offer powerful free tiers that help agents create virtual tours, generate listing content, design marketing materials, and analyze property values — all without spending a dime.</p>
+
+    <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
+      <p class="font-semibold text-green-900">💰 Quick Pick — Best Free Tools:</p>
+      <ul class="text-sm text-green-800 mt-2 space-y-1">
+        <li><strong>Best free 3D tours:</strong> <a href="/listing/matterport" class="underline">Matterport</a> — Create immersive 3D walkthroughs from your phone</li>
+        <li><strong>Best free valuations:</strong> <a href="/listing/plunk" class="underline">Plunk</a> — AI home values + renovation ROI analysis</li>
+        <li><strong>Best free design:</strong> <a href="/listing/canva" class="underline">Canva</a> — AI-powered marketing templates for real estate</li>
+        <li><strong>Best free content:</strong> <a href="/listing/epique-ai" class="underline">Epique AI</a> — AI listing descriptions, bios, and social posts</li>
+        <li><strong>Best free staging:</strong> <a href="/listing/reimaginehome" class="underline">REimagineHome</a> — AI virtual staging with free credits</li>
+      </ul>
+    </div>
+
+    <ComparisonTable items={tools} featureList={features} title="Feature Comparison" />
+
+    <section class="mt-12 space-y-8">
+      {tools.map((tool, i) => (
+        <div class="border-b border-gray-200 pb-8">
+          <h2 class="text-2xl font-bold mb-2">{i + 1}. {tool.name}</h2>
+          <p class="text-sm text-gray-500 mb-3">Starting at {tool.pricing.startingPrice || 'Free'} · Rating: ★ {tool.rating?.toFixed(1)}</p>
+          <p class="text-gray-700 mb-4">{tool.description}</p>
+          <div class="grid grid-cols-2 gap-4">
+            {tool.pros && (
+              <div>
+                <h3 class="font-semibold text-green-700 mb-1">Pros</h3>
+                <ul class="text-sm space-y-1">{tool.pros.map((p: string) => <li>✅ {p}</li>)}</ul>
+              </div>
+            )}
+            {tool.cons && (
+              <div>
+                <h3 class="font-semibold text-red-700 mb-1">Cons</h3>
+                <ul class="text-sm space-y-1">{tool.cons.map((c: string) => <li>❌ {c}</li>)}</ul>
+              </div>
+            )}
+          </div>
+          <a href={`/listing/${tool.slug}`} class="inline-block mt-3 text-blue-600 text-sm hover:underline">Read full review →</a>
+        </div>
+      ))}
+    </section>
+
+    <section class="mt-12 bg-gray-50 rounded-lg p-6">
+      <h2 class="text-xl font-bold mb-3">Tips for Getting the Most from Free AI Tools</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>🎯 <strong>Stack them together</strong> — Use Matterport for tours, Canva for flyers, Epique for copy, and Plunk for valuations</li>
+        <li>📱 <strong>Start with mobile</strong> — Most free tiers work great on smartphones</li>
+        <li>⬆️ <strong>Upgrade strategically</strong> — Test free tiers first, then upgrade only the tools that deliver clear ROI</li>
+        <li>🔄 <strong>Check for new free features</strong> — AI tools frequently expand their free tiers to attract users</li>
+      </ul>
+    </section>
+
+    <FAQSection faqs={faqs} />
+  </article>
+</BaseLayout>

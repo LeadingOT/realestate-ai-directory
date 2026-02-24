@@ -1,0 +1,15 @@
+{
+  "name": "Getfloorplan",
+  "slug": "getfloorplan",
+  "tagline": "AI-generated 2D and 3D floor plans from sketches or photos",
+  "description": "Getfloorplan uses AI to transform rough sketches, blueprints, or even photos into professional 2D floor plans, 3D floor plans, and virtual tours. Real estate agents can submit a hand-drawn sketch and receive polished, MLS-ready floor plans within hours. The service combines AI automation with human quality control for accurate, attractive results.",
+  "category": "Virtual Tours",
+  "url": "https://getfloorplan.com",
+  "pricing": { "model": "paid", "startingPrice": "$15/plan" },
+  "features": ["AI floor plan generation", "2D floor plans", "3D floor plans", "Virtual tours from floor plans", "Sketch-to-plan conversion", "Furniture placement", "Branded output", "Fast turnaround"],
+  "pros": ["Very affordable per plan", "Accepts hand-drawn sketches", "Multiple output formats", "Quick turnaround"],
+  "cons": ["Not fully automated (human review)", "Complex layouts may need revisions", "No free tier"],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-24",
+  "tags": ["floor-plans", "3d", "virtual-tours", "marketing", "listing-media"]
+}

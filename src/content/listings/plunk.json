@@ -1,0 +1,15 @@
+{
+  "name": "Plunk",
+  "slug": "plunk",
+  "tagline": "AI-driven home value tracking and renovation ROI analysis",
+  "description": "Plunk uses AI to provide real-time home valuations and predict the ROI of specific renovations. Homeowners and agents can see how improvements like kitchen remodels or ADU additions would impact property value. Plunk analyzes millions of data points including permits, sales, and neighborhood trends to deliver accurate, continuously updated valuations.",
+  "category": "Property Valuation",
+  "url": "https://www.getplunk.com",
+  "pricing": { "model": "freemium", "startingPrice": "Free" },
+  "features": ["AI home valuations", "Renovation ROI calculator", "Real-time value tracking", "Neighborhood analytics", "Permit data analysis", "Home improvement recommendations", "Agent dashboard", "Market trend insights"],
+  "pros": ["Free for homeowners", "Unique renovation ROI feature", "Continuously updated valuations", "Easy-to-understand interface"],
+  "cons": ["Coverage limited to certain US markets", "Valuations are estimates only", "Agent tools require paid plan"],
+  "rating": 4.1,
+  "lastUpdated": "2026-02-24",
+  "tags": ["property-valuation", "home-value", "renovation", "analytics", "free"]
+}
