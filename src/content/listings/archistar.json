@@ -2,14 +2,42 @@
   "name": "Archistar",
   "slug": "archistar",
   "tagline": "AI property development feasibility and generative design platform",
-  "description": "Archistar combines AI-powered generative design with property data to help developers and agents assess development potential instantly. It analyzes zoning rules, overlays, and site constraints to generate compliant building designs automatically. Users can evaluate thousands of sites, generate 3D massing studies, and produce feasibility reports — all from a web browser.",
+  "description": "Archistar is a web-based platform that helps property developers, real estate agents, and architects quickly assess the development potential of land. It uses artificial intelligence to automate the initial feasibility study process, saving significant time and reducing manual research errors.\n\nThe tool works by analyzing a specific property address against current zoning regulations, planning overlays, and site constraints like setbacks and height limits. Its core function is to then generate multiple compliant building design options, known as massing studies, in 3D. This allows users to visually understand what can legally be built on a site within minutes.\n\nKey standout features include the ability to evaluate and compare thousands of sites at once using portfolio analysis tools, and the automated generation of detailed feasibility reports complete with financial metrics. These reports consolidate zoning summaries, yield potential, and visual massing into a single document ready for stakeholder review.\n\nA clear use case is for a development firm screening multiple potential acquisition sites. Instead of spending weeks on manual due diligence for each one, a planner can use Archistar to input all addresses, instantly see which sites offer the highest yield potential under current rules, and generate preliminary 3D concepts and reports to prioritize the most viable opportunities for further investment. The main benefit is making early-stage development assessment faster, data-driven, and more comprehensive.",
   "category": "Commercial",
   "url": "https://archistar.ai",
-  "pricing": { "model": "paid", "startingPrice": "$199/mo" },
-  "features": ["Generative building design", "Zoning analysis", "Site feasibility reports", "3D massing models", "Planning overlay data", "Bulk site assessment", "Financial feasibility", "Suburb analytics", "Development potential scoring"],
-  "pros": ["Instant feasibility analysis", "Understands local zoning rules", "Beautiful 3D visualizations", "Bulk site screening"],
-  "cons": ["Best coverage in Australia", "Expensive for casual users", "Complex interface for beginners"],
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$199/mo"
+  },
+  "features": [
+    "Generative building design",
+    "Zoning analysis",
+    "Site feasibility reports",
+    "3D massing models",
+    "Planning overlay data",
+    "Bulk site assessment",
+    "Financial feasibility",
+    "Suburb analytics",
+    "Development potential scoring"
+  ],
+  "pros": [
+    "Instant feasibility analysis",
+    "Understands local zoning rules",
+    "Beautiful 3D visualizations",
+    "Bulk site screening"
+  ],
+  "cons": [
+    "Best coverage in Australia",
+    "Expensive for casual users",
+    "Complex interface for beginners"
+  ],
   "rating": 4.2,
   "lastUpdated": "2026-02-24",
-  "tags": ["development", "generative-design", "feasibility", "zoning", "property-development"]
+  "tags": [
+    "development",
+    "generative-design",
+    "feasibility",
+    "zoning",
+    "property-development"
+  ]
 }

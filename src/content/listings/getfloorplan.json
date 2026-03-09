@@ -2,14 +2,41 @@
   "name": "Getfloorplan",
   "slug": "getfloorplan",
   "tagline": "AI-generated 2D and 3D floor plans from sketches or photos",
-  "description": "Getfloorplan uses AI to transform rough sketches, blueprints, or even photos into professional 2D floor plans, 3D floor plans, and virtual tours. Real estate agents can submit a hand-drawn sketch and receive polished, MLS-ready floor plans within hours. The service combines AI automation with human quality control for accurate, attractive results.",
+  "description": "Getfloorplan is a specialized service that converts basic visual inputs—such as rough hand-drawn sketches, existing blueprints, or photographs of a space—into professional, publication-ready floor plans and virtual tours. It is designed primarily for real estate professionals, including agents, brokers, and property managers, who need high-quality visual assets quickly and reliably. The core benefit is saving significant time and resources while ensuring listings have accurate, attractive, and standardized visuals that meet MLS requirements.\n\nThe process begins when a user submits an initial sketch or photo. Getfloorplan’s AI system generates a detailed 2D floor plan, a fully furnished 3D model, and an interactive 360-degree virtual tour. These outputs are then reviewed by a human quality control specialist to verify measurements and layout accuracy, combining automation with expert oversight. Standout features include the generation of a complete package (2D, 3D, and virtual tour) from a single input, a typical turnaround time of a few hours, and the human-in-the-loop validation that ensures precision.\n\nA clear use case is an agent visiting a vacant property. They can quickly measure rooms and draw a basic layout on paper, submit it to Getfloorplan, and have a polished set of digital assets ready for the listing by the same afternoon. This eliminates the need for scheduling a separate photographer or 3D artist, accelerating the listing process. Pricing is based on a per-order model, providing a practical solution for individual properties without requiring a subscription.",
   "category": "Virtual Tours",
   "url": "https://getfloorplan.com",
-  "pricing": { "model": "paid", "startingPrice": "$15/plan" },
-  "features": ["AI floor plan generation", "2D floor plans", "3D floor plans", "Virtual tours from floor plans", "Sketch-to-plan conversion", "Furniture placement", "Branded output", "Fast turnaround"],
-  "pros": ["Very affordable per plan", "Accepts hand-drawn sketches", "Multiple output formats", "Quick turnaround"],
-  "cons": ["Not fully automated (human review)", "Complex layouts may need revisions", "No free tier"],
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$15/plan"
+  },
+  "features": [
+    "AI floor plan generation",
+    "2D floor plans",
+    "3D floor plans",
+    "Virtual tours from floor plans",
+    "Sketch-to-plan conversion",
+    "Furniture placement",
+    "Branded output",
+    "Fast turnaround"
+  ],
+  "pros": [
+    "Very affordable per plan",
+    "Accepts hand-drawn sketches",
+    "Multiple output formats",
+    "Quick turnaround"
+  ],
+  "cons": [
+    "Not fully automated (human review)",
+    "Complex layouts may need revisions",
+    "No free tier"
+  ],
   "rating": 4.1,
   "lastUpdated": "2026-02-24",
-  "tags": ["floor-plans", "3d", "virtual-tours", "marketing", "listing-media"]
+  "tags": [
+    "floor-plans",
+    "3d",
+    "virtual-tours",
+    "marketing",
+    "listing-media"
+  ]
 }

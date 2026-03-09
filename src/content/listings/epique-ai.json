@@ -2,14 +2,40 @@
   "name": "Epique AI",
   "slug": "epique-ai",
   "tagline": "Free AI writing assistant built specifically for real estate agents",
-  "description": "Epique AI is a free AI-powered writing tool designed exclusively for real estate professionals. It generates listing descriptions, blog posts, social media content, email newsletters, and even complete marketing campaigns. Also includes AI-powered CMA narrative generation and a real estate-specific knowledge base.",
+  "description": "Epique AI is a free, specialized writing assistant built for real estate agents, brokers, and teams. It streamlines content creation by generating industry-specific text for daily tasks. The tool produces detailed property listings, engaging social media posts, blog articles, and email newsletters. It can also assemble complete marketing campaign materials, saving professionals significant time and effort.\n\nKey features include an AI-powered Comparative Market Analysis (CMA) narrative generator, which turns data points into a compelling client-ready story. It also offers a real estate-specific knowledge base, ensuring terminology and descriptions are accurate and on-brand. The tool is designed exclusively for the industry, so outputs understand local market nuances, property features, and buyer concerns.\n\nA clear use case is preparing a new listing. An agent can input property details and receive a polished, emotionally resonant description highlighting key selling points, which can then be adapted for a Facebook post, a flyer, and a client email—all from one starting point. The main benefit is consistently professional marketing content created in minutes, allowing agents to focus more on clients and closings.",
   "category": "Marketing & Content",
   "url": "https://www.epique.ai",
-  "pricing": { "model": "free" },
-  "features": ["AI listing descriptions", "Blog post generator", "Social media content", "Email newsletter writer", "CMA narratives", "Marketing campaign builder", "Real estate knowledge base", "Hashtag generator"],
-  "pros": ["Completely free", "Built for real estate", "Wide range of content types", "No signup hassles"],
-  "cons": ["Output quality varies", "Limited customization", "No visual/design features"],
-  "rating": 4.0,
+  "pricing": {
+    "model": "free"
+  },
+  "features": [
+    "AI listing descriptions",
+    "Blog post generator",
+    "Social media content",
+    "Email newsletter writer",
+    "CMA narratives",
+    "Marketing campaign builder",
+    "Real estate knowledge base",
+    "Hashtag generator"
+  ],
+  "pros": [
+    "Completely free",
+    "Built for real estate",
+    "Wide range of content types",
+    "No signup hassles"
+  ],
+  "cons": [
+    "Output quality varies",
+    "Limited customization",
+    "No visual/design features"
+  ],
+  "rating": 4,
   "lastUpdated": "2026-02-23",
-  "tags": ["content-creation", "listing-descriptions", "free", "writing", "marketing"]
+  "tags": [
+    "content-creation",
+    "listing-descriptions",
+    "free",
+    "writing",
+    "marketing"
+  ]
 }

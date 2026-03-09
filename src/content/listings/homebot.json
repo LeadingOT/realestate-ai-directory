@@ -2,14 +2,41 @@
   "name": "Homebot",
   "slug": "homebot",
   "tagline": "AI-powered client engagement platform for real estate and mortgage professionals",
-  "description": "Homebot sends personalized, AI-generated home finance reports to past clients and prospects monthly. Each report shows updated home values, equity positions, refinance opportunities, and investment scenarios. This keeps agents top-of-mind with their sphere and generates repeat and referral business by providing ongoing value long after the transaction closes.",
+  "description": "Homebot is a marketing tool that automatically sends personalized home finance reports to your past clients and new prospects each month. It uses AI and local market data to generate detailed, easy-to-understand updates for each recipient. This provides consistent, valuable touchpoints that nurture your real estate sphere and generate repeat and referral business long after a sale is complete.\n\nThe tool is designed specifically for real estate agents and loan officers who want to maintain top-of-mind awareness with their network. Its standout features include hyper-personalized reports showing an individual's current estimated home value and equity position, along with actionable scenarios for refinancing or using equity for investment. It also offers automated, branded delivery via email or text, saving you hours of manual work each month. The primary benefit is transforming you from a one-time transaction contact into a trusted, ongoing financial resource.\n\nA clear use case is for an agent with a database of 200 past clients. Instead of sporadic check-ins, Homebot delivers monthly value to every person automatically. When a client sees their growing equity highlighted in a report you provided, they are far more likely to think of you first when they decide to sell, buy a rental property, or refer a friend. This systematic approach turns client retention into a predictable source of new leads.",
   "category": "Marketing",
   "url": "https://homebot.ai",
-  "pricing": { "model": "paid", "startingPrice": "$25/mo" },
-  "features": ["Monthly home value reports", "Equity tracking", "Refinance alerts", "Investment analysis", "Personalized client portal", "Automated email delivery", "Buyer reports", "Agent branding"],
-  "pros": ["Very affordable", "High client engagement rates", "Keeps you top-of-mind", "Easy to set up"],
-  "cons": ["Limited customization options", "Reports can confuse some clients", "US-only"],
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$25/mo"
+  },
+  "features": [
+    "Monthly home value reports",
+    "Equity tracking",
+    "Refinance alerts",
+    "Investment analysis",
+    "Personalized client portal",
+    "Automated email delivery",
+    "Buyer reports",
+    "Agent branding"
+  ],
+  "pros": [
+    "Very affordable",
+    "High client engagement rates",
+    "Keeps you top-of-mind",
+    "Easy to set up"
+  ],
+  "cons": [
+    "Limited customization options",
+    "Reports can confuse some clients",
+    "US-only"
+  ],
   "rating": 4.3,
   "lastUpdated": "2026-02-24",
-  "tags": ["client-engagement", "marketing", "home-value", "email", "sphere-of-influence"]
+  "tags": [
+    "client-engagement",
+    "marketing",
+    "home-value",
+    "email",
+    "sphere-of-influence"
+  ]
 }

@@ -2,14 +2,41 @@
   "name": "Follow Up Boss",
   "slug": "follow-up-boss",
   "tagline": "The #1 rated real estate CRM with AI-powered lead management and team routing",
-  "description": "Follow Up Boss is the most popular CRM among high-performing real estate teams. Features AI-powered lead distribution, automated action plans, and integrations with 250+ lead sources. Known for its clean interface and powerful automation that helps agents respond to leads faster and convert more consistently.",
+  "description": "Follow Up Boss is a customer relationship management (CRM) platform designed specifically for real estate teams and brokerages. Its core function is to centralize lead management, ensuring no opportunity is missed and every client receives timely, organized follow-up. It is built to handle high lead volume from numerous sources and streamline the entire sales process for teams focused on growth and efficiency.\n\nKey features include AI-powered lead distribution, which automatically scores and assigns new leads to the most appropriate agent based on location, specialty, or capacity. This works in tandem with automated action plans, which trigger a sequence of tailored texts, emails, and tasks the moment a lead comes in. The platform integrates directly with over 250 major lead sources, websites, and marketing tools, keeping all data in one place with a clean, user-friendly interface.\n\nThis tool is ideal for growing real estate teams and brokerages that need a systematic way to manage inbound leads from multiple channels like Zillow, Realtor.com, and their own website. The main benefit is a significant increase in lead response time and conversion consistency, as the system enforces best practices and removes manual administrative work.\n\nA clear use case is a team receiving dozens of online buyer inquiries daily. Follow Up Boss automatically routes each lead, immediately sends a personalized introduction, and schedules a follow-up call for the assigned agent, all while logging the interaction. This allows agents to focus on conversations rather than data entry, turning more leads into appointments.",
   "category": "CRM & Follow-up",
   "url": "https://www.followupboss.com",
-  "pricing": { "model": "paid", "startingPrice": "$58/mo" },
-  "features": ["AI lead distribution", "250+ integrations", "Action plans automation", "Speed-to-lead alerts", "Team management", "Calling & texting built-in", "Reporting dashboard", "Mobile app"],
-  "pros": ["Clean, intuitive interface", "Best-in-class integrations", "Excellent for teams", "Affordable starting price"],
-  "cons": ["No built-in IDX website", "AI features less advanced than competitors", "Add-ons increase cost"],
+  "pricing": {
+    "model": "paid",
+    "startingPrice": "$58/mo"
+  },
+  "features": [
+    "AI lead distribution",
+    "250+ integrations",
+    "Action plans automation",
+    "Speed-to-lead alerts",
+    "Team management",
+    "Calling & texting built-in",
+    "Reporting dashboard",
+    "Mobile app"
+  ],
+  "pros": [
+    "Clean, intuitive interface",
+    "Best-in-class integrations",
+    "Excellent for teams",
+    "Affordable starting price"
+  ],
+  "cons": [
+    "No built-in IDX website",
+    "AI features less advanced than competitors",
+    "Add-ons increase cost"
+  ],
   "rating": 4.5,
   "lastUpdated": "2026-02-23",
-  "tags": ["crm", "lead-management", "team-management", "integrations", "automation"]
+  "tags": [
+    "crm",
+    "lead-management",
+    "team-management",
+    "integrations",
+    "automation"
+  ]
 }
