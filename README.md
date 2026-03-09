@@ -42,3 +42,4 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 # Updated Sat Mar  7 19:57:05 PST 2026
+# Force redeploy
