@@ -7,7 +7,7 @@
   "url": "https://www.aihomedesign.com",
   "pricing": {
     "model": "freemium",
-    "startingPrice": "$29/mo"
+    "startingPrice": "$19/mo billed annually ($35/mo monthly)"
   },
   "features": [
     "Virtual renovation",
@@ -37,5 +37,8 @@
     "interior-design",
     "visualization",
     "listing-photos"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.aihomedesign.com/pricing"
 }
