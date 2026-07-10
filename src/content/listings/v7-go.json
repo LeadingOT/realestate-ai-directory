@@ -36,5 +36,8 @@
     "commercial-real-estate",
     "enterprise",
     "compliance"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.v7labs.com/pricing"
 }

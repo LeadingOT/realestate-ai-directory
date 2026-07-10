@@ -6,8 +6,7 @@
   "category": "Lead Generation",
   "url": "https://www.ylopo.com",
   "pricing": {
-    "model": "paid",
-    "startingPrice": "$600/mo"
+    "model": "paid"
   },
   "features": [
     "AI voice assistant",
@@ -35,5 +34,8 @@
     "lead-nurturing",
     "meta-ads",
     "video-marketing"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.ylopo.com/pricing"
 }

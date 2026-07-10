@@ -7,7 +7,7 @@
   "url": "https://homebot.ai",
   "pricing": {
     "model": "paid",
-    "startingPrice": "$25/mo"
+    "startingPrice": "$125/mo"
   },
   "features": [
     "Monthly home value reports",
@@ -38,5 +38,8 @@
     "home-value",
     "email",
     "sphere-of-influence"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://homebot.ai/pricing"
 }

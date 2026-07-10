@@ -36,5 +36,8 @@
     "crm",
     "seller-leads",
     "farming"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.topproducer.com/pricing/"
 }

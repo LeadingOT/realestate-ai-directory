@@ -6,8 +6,7 @@
   "category": "Transaction Management",
   "url": "https://www.prophia.com",
   "pricing": {
-    "model": "paid",
-    "startingPrice": "$20/document"
+    "model": "paid"
   },
   "features": [
     "35+ lease term extraction",
@@ -34,5 +33,8 @@
     "commercial-real-estate",
     "document-processing",
     "human-in-the-loop"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.prophia.com/pricing"
 }

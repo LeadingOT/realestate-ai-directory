@@ -7,7 +7,7 @@
   "url": "https://www.structurely.com",
   "pricing": {
     "model": "paid",
-    "startingPrice": "$149/mo"
+    "startingPrice": "$499/mo"
   },
   "features": [
     "AI text conversations",
@@ -34,5 +34,8 @@
     "ai-chat",
     "lead-qualification",
     "appointment-scheduling"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.structurely.com/pricing"
 }

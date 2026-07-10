@@ -4,10 +4,10 @@
   "tagline": "AI-powered CRM add-on that converts your existing database into seller leads",
   "description": "Fello is a CRM integration that helps real estate agents and teams prioritize and convert their most promising leads. It works by analyzing your existing CRM database to identify homeowners who are most likely to sell their property within the next six months. The tool assigns each lead a sell-likelihood score, allowing you to focus your time and effort on the hottest opportunities.\n\nKey features include its predictive scoring algorithm, which uses property and behavioral data to forecast seller intent, and its automated, hyper-personalized AI marketing campaigns. Once leads are scored, Fello generates tailored email and text sequences designed to nurture them until they are ready to list. A standout feature is its direct two-way SMS capability, enabling seamless communication within the nurtured campaign.\n\nThis tool is for real estate professionals who have a database of past clients and leads but struggle with knowing who to contact and when. The main benefit is a significant increase in listing conversions by systematically moving the right leads through a personalized funnel, rather than relying on sporadic outreach.\n\nA typical use case involves an agent uploading their CRM contacts into Fello. The system scores the list, revealing a past client from three years ago with a high 85% sell score. The agent then enrolls that lead into an automated, personalized campaign sharing local market updates and seller tips. The lead engages via text, and the agent is notified to schedule a listing presentation, effectively converting a cold contact into a new listing.",
   "category": "CRM & Follow-up",
-  "url": "https://www.hifello.com",
+  "url": "https://fello.ai",
   "pricing": {
     "model": "paid",
-    "startingPrice": "$165/mo"
+    "startingPrice": "$415/mo billed annually ($498/mo monthly)"
   },
   "features": [
     "AI lead scoring",
@@ -35,5 +35,8 @@
     "seller-leads",
     "database-enrichment",
     "marketing-automation"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://fello.ai/pricing"
 }

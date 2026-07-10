@@ -7,7 +7,7 @@
   "url": "https://getfloorplan.com",
   "pricing": {
     "model": "paid",
-    "startingPrice": "$15/plan"
+    "startingPrice": "$25/plan (Basic set, 2D+3D)"
   },
   "features": [
     "AI floor plan generation",
@@ -38,5 +38,8 @@
     "virtual-tours",
     "marketing",
     "listing-media"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://getfloorplan.com/pricing"
 }

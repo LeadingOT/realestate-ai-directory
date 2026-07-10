@@ -6,7 +6,8 @@
   "category": "Analytics & Market Data",
   "url": "https://www.housecanary.com",
   "pricing": {
-    "model": "enterprise"
+    "model": "paid",
+    "startingPrice": "$19/mo"
   },
   "features": [
     "Automated valuation models",
@@ -34,5 +35,8 @@
     "market-data",
     "investment",
     "avm"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.housecanary.com/pricing"
 }

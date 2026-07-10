@@ -7,7 +7,7 @@
   "url": "https://www.listedkit.com",
   "pricing": {
     "model": "paid",
-    "startingPrice": "$29/mo"
+    "startingPrice": "$14.99/transaction"
   },
   "features": [
     "AI transaction tracking",
@@ -34,5 +34,8 @@
     "productivity",
     "automation",
     "document-management"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.listedkit.com/pricing"
 }

@@ -4,7 +4,7 @@
   "tagline": "AI email marketing with lead enrichment and personalized campaigns",
   "description": "Scout provides AI-powered email marketing specifically for real estate agents. It enriches leads with details like birthdays and home information (bedrooms, baths, ownership length), then creates automated, personalized email campaigns. Includes an AI email template library and writing assistance.",
   "category": "Marketing & Content",
-  "url": "https://www.scoutemail.com",
+  "url": "https://www.trustscout.com",
   "pricing": {
     "model": "freemium",
     "startingPrice": "$200/mo"
@@ -34,5 +34,8 @@
     "lead-enrichment",
     "marketing-automation",
     "personalization"
-  ]
+  ],
+  "verifiedAt": "2026-07-10",
+  "verifyMethod": "web-verify-2026-07 (official site check + published pricing)",
+  "verifyEvidence": "https://www.trustscout.com/pricing"
 }
